@@ -26,8 +26,11 @@ class DogBreedScraper:
         return response.text
 
     def clean_breed_name(self, name: str) -> str:
-        """Clean breed name by removing citation numbers."""
-        return re.sub(r"\[\d+\]", "", name).strip()
+        """Clean breed name by removing citation numbers and notes."""
+        # Remove [1], [2], etc. and [note 1], [note 2], etc.
+        name = re.sub(r"\[\d+\]", "", name)
+        name = re.sub(r"\[note \d+\]", "", name)
+        return name.strip()
 
     def fetch_breed_description(self, url: str) -> str:
         """Fetch the first paragraph description from a breed's Wikipedia page."""
