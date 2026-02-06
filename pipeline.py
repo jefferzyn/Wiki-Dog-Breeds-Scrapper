@@ -1,7 +1,4 @@
-"""
-Haystack pipeline for dog breed search and retrieval.
-Indexes scraped dog breeds and enables semantic search.
-"""
+
 
 from haystack import Document, Pipeline
 from haystack.components.retrievers.in_memory import InMemoryBM25Retriever
@@ -45,16 +42,7 @@ class DogBreedPipeline:
         self.pipeline.add_component("retriever", self.retriever)
 
     def search(self, query: str, top_k: int = 5) -> list:
-        """
-        Search for dog breeds matching the query.
 
-        Args:
-            query: Search query (e.g., "small dog breeds")
-            top_k: Number of top results to return
-
-        Returns:
-            List of matching documents
-        """
         if not self.pipeline:
             raise RuntimeError("Pipeline not built. Call build_pipeline() first.")
 

@@ -1,0 +1,3072 @@
+[
+  {
+    "name": "Affenpinscher",
+    "url": "https://en.wikipedia.org/wiki/Affenpinscher",
+    "description": ""
+  },
+  {
+    "name": "Afghan Hound",
+    "url": "https://en.wikipedia.org/wiki/Afghan_Hound",
+    "description": ""
+  },
+  {
+    "name": "Africanis",
+    "url": "https://en.wikipedia.org/wiki/Africanis",
+    "description": ""
+  },
+  {
+    "name": "Aidi",
+    "url": "https://en.wikipedia.org/wiki/Aidi",
+    "description": ""
+  },
+  {
+    "name": "Airedale Terrier",
+    "url": "https://en.wikipedia.org/wiki/Airedale_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Akbash",
+    "url": "https://en.wikipedia.org/wiki/Akbash",
+    "description": ""
+  },
+  {
+    "name": "Akita",
+    "url": "https://en.wikipedia.org/wiki/Akita_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Aksaray Malaklisi",
+    "url": "https://en.wikipedia.org/wiki/Aksaray_Malaklisi",
+    "description": ""
+  },
+  {
+    "name": "Alano Español",
+    "url": "https://en.wikipedia.org/wiki/Alano_Espa%C3%B1ol",
+    "description": ""
+  },
+  {
+    "name": "Alapaha Blue Blood Bulldog",
+    "url": "https://en.wikipedia.org/wiki/Alapaha_Blue_Blood_Bulldog",
+    "description": ""
+  },
+  {
+    "name": "Alaskan Husky",
+    "url": "https://en.wikipedia.org/wiki/Alaskan_Husky",
+    "description": ""
+  },
+  {
+    "name": "Alaskan Klee Kai",
+    "url": "https://en.wikipedia.org/wiki/Alaskan_Klee_Kai",
+    "description": ""
+  },
+  {
+    "name": "Alaskan Malamute",
+    "url": "https://en.wikipedia.org/wiki/Alaskan_Malamute",
+    "description": ""
+  },
+  {
+    "name": "Alopekis",
+    "url": "https://en.wikipedia.org/wiki/Alopekis",
+    "description": ""
+  },
+  {
+    "name": "Alpine Dachsbracke",
+    "url": "https://en.wikipedia.org/wiki/Alpine_Dachsbracke",
+    "description": ""
+  },
+  {
+    "name": "American Bulldog",
+    "url": "https://en.wikipedia.org/wiki/American_Bulldog",
+    "description": ""
+  },
+  {
+    "name": "American Bully",
+    "url": "https://en.wikipedia.org/wiki/American_Bully",
+    "description": ""
+  },
+  {
+    "name": "American Cocker Spaniel",
+    "url": "https://en.wikipedia.org/wiki/American_Cocker_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "American English Coonhound",
+    "url": "https://en.wikipedia.org/wiki/American_English_Coonhound",
+    "description": ""
+  },
+  {
+    "name": "American Eskimo Dog",
+    "url": "https://en.wikipedia.org/wiki/American_Eskimo_Dog",
+    "description": ""
+  },
+  {
+    "name": "American Foxhound",
+    "url": "https://en.wikipedia.org/wiki/American_Foxhound",
+    "description": ""
+  },
+  {
+    "name": "American Hairless Terrier",
+    "url": "https://en.wikipedia.org/wiki/American_Hairless_Terrier",
+    "description": ""
+  },
+  {
+    "name": "American Leopard Hound",
+    "url": "https://en.wikipedia.org/wiki/American_Leopard_Hound",
+    "description": ""
+  },
+  {
+    "name": "American Pit Bull Terrier",
+    "url": "https://en.wikipedia.org/wiki/American_Pit_Bull_Terrier",
+    "description": ""
+  },
+  {
+    "name": "American Staffordshire Terrier",
+    "url": "https://en.wikipedia.org/wiki/American_Staffordshire_Terrier",
+    "description": ""
+  },
+  {
+    "name": "American Water Spaniel",
+    "url": "https://en.wikipedia.org/wiki/American_Water_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Andalusian Terrier",
+    "url": "https://en.wikipedia.org/wiki/Andalusian_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Anglo-Français de Petite Vénerie",
+    "url": "https://en.wikipedia.org/wiki/Anglo-Fran%C3%A7ais_de_Petite_V%C3%A9nerie",
+    "description": ""
+  },
+  {
+    "name": "Appenzeller Sennenhund",
+    "url": "https://en.wikipedia.org/wiki/Appenzeller_Sennenhund",
+    "description": ""
+  },
+  {
+    "name": "Ariège Pointer",
+    "url": "https://en.wikipedia.org/wiki/Ari%C3%A8ge_Pointer",
+    "description": ""
+  },
+  {
+    "name": "Ariégeois",
+    "url": "https://en.wikipedia.org/wiki/Ari%C3%A9geois",
+    "description": ""
+  },
+  {
+    "name": "Argentine Pila",
+    "url": "https://en.wikipedia.org/wiki/Argentine_Pila",
+    "description": ""
+  },
+  {
+    "name": "Armant",
+    "url": "https://en.wikipedia.org/wiki/Armant_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Armenian Gampr",
+    "url": "https://en.wikipedia.org/wiki/Armenian_Gampr",
+    "description": ""
+  },
+  {
+    "name": "Artois Hound",
+    "url": "https://en.wikipedia.org/wiki/Artois_Hound",
+    "description": ""
+  },
+  {
+    "name": "Australian Cattle Dog",
+    "url": "https://en.wikipedia.org/wiki/Australian_Cattle_Dog",
+    "description": ""
+  },
+  {
+    "name": "Australian Kelpie",
+    "url": "https://en.wikipedia.org/wiki/Australian_Kelpie",
+    "description": ""
+  },
+  {
+    "name": "Australian Shepherd",
+    "url": "https://en.wikipedia.org/wiki/Australian_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Australian Silky Terrier",
+    "url": "https://en.wikipedia.org/wiki/Australian_Silky_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Australian Stumpy Tail Cattle Dog",
+    "url": "https://en.wikipedia.org/wiki/Australian_Stumpy_Tail_Cattle_Dog",
+    "description": ""
+  },
+  {
+    "name": "Australian Terrier",
+    "url": "https://en.wikipedia.org/wiki/Australian_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Austrian Black and Tan Hound",
+    "url": "https://en.wikipedia.org/wiki/Austrian_Black_and_Tan_Hound",
+    "description": ""
+  },
+  {
+    "name": "Austrian Pinscher",
+    "url": "https://en.wikipedia.org/wiki/Austrian_Pinscher",
+    "description": ""
+  },
+  {
+    "name": "Azawakh",
+    "url": "https://en.wikipedia.org/wiki/Azawakh",
+    "description": ""
+  },
+  {
+    "name": "Bắc Hà",
+    "url": "https://en.wikipedia.org/wiki/B%E1%BA%AFc_H%C3%A0_dog",
+    "description": ""
+  },
+  {
+    "name": "Bakharwal",
+    "url": "https://en.wikipedia.org/wiki/Bakharwal_dog",
+    "description": ""
+  },
+  {
+    "name": "Banjara Hound",
+    "url": "https://en.wikipedia.org/wiki/Banjara_Hound",
+    "description": ""
+  },
+  {
+    "name": "Bankhar Dog",
+    "url": "https://en.wikipedia.org/wiki/Bankhar_Dog",
+    "description": ""
+  },
+  {
+    "name": "Barak hound",
+    "url": "https://en.wikipedia.org/wiki/Barak_hound",
+    "description": ""
+  },
+  {
+    "name": "Barbado da Terceira",
+    "url": "https://en.wikipedia.org/wiki/Barbado_da_Terceira",
+    "description": ""
+  },
+  {
+    "name": "Barbet",
+    "url": "https://en.wikipedia.org/wiki/Barbet_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Basenji",
+    "url": "https://en.wikipedia.org/wiki/Basenji",
+    "description": ""
+  },
+  {
+    "name": "Basque Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/Basque_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Basset Artésien Normand",
+    "url": "https://en.wikipedia.org/wiki/Basset_Art%C3%A9sien_Normand",
+    "description": ""
+  },
+  {
+    "name": "Basset Bleu de Gascogne",
+    "url": "https://en.wikipedia.org/wiki/Basset_Bleu_de_Gascogne",
+    "description": ""
+  },
+  {
+    "name": "Basset Fauve de Bretagne",
+    "url": "https://en.wikipedia.org/wiki/Basset_Fauve_de_Bretagne",
+    "description": ""
+  },
+  {
+    "name": "Basset Hound",
+    "url": "https://en.wikipedia.org/wiki/Basset_Hound",
+    "description": ""
+  },
+  {
+    "name": "Bavarian Mountain Hound",
+    "url": "https://en.wikipedia.org/wiki/Bavarian_Mountain_Hound",
+    "description": ""
+  },
+  {
+    "name": "Beagle",
+    "url": "https://en.wikipedia.org/wiki/Beagle",
+    "description": ""
+  },
+  {
+    "name": "Beagle-Harrier",
+    "url": "https://en.wikipedia.org/wiki/Beagle-Harrier",
+    "description": ""
+  },
+  {
+    "name": "Bearded Collie",
+    "url": "https://en.wikipedia.org/wiki/Bearded_Collie",
+    "description": ""
+  },
+  {
+    "name": "Beauceron",
+    "url": "https://en.wikipedia.org/wiki/Beauceron",
+    "description": ""
+  },
+  {
+    "name": "Bedlington Terrier",
+    "url": "https://en.wikipedia.org/wiki/Bedlington_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Belgian Shepherd",
+    "url": "https://en.wikipedia.org/wiki/Belgian_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Bergamasco Shepherd",
+    "url": "https://en.wikipedia.org/wiki/Bergamasco_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Berger Picard",
+    "url": "https://en.wikipedia.org/wiki/Berger_Picard",
+    "description": ""
+  },
+  {
+    "name": "Bernese Mountain Dog",
+    "url": "https://en.wikipedia.org/wiki/Bernese_Mountain_Dog",
+    "description": ""
+  },
+  {
+    "name": "Bichon Frisé",
+    "url": "https://en.wikipedia.org/wiki/Bichon_Fris%C3%A9",
+    "description": ""
+  },
+  {
+    "name": "Biewer Terrier",
+    "url": "https://en.wikipedia.org/wiki/Biewer_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Billy",
+    "url": "https://en.wikipedia.org/wiki/Billy_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Black and Tan Coonhound",
+    "url": "https://en.wikipedia.org/wiki/Black_and_Tan_Coonhound",
+    "description": ""
+  },
+  {
+    "name": "Black Norwegian Elkhound",
+    "url": "https://en.wikipedia.org/wiki/Black_Norwegian_Elkhound",
+    "description": ""
+  },
+  {
+    "name": "Black Russian Terrier",
+    "url": "https://en.wikipedia.org/wiki/Black_Russian_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Black Mouth Cur",
+    "url": "https://en.wikipedia.org/wiki/Black_Mouth_Cur",
+    "description": ""
+  },
+  {
+    "name": "Bloodhound",
+    "url": "https://en.wikipedia.org/wiki/Bloodhound",
+    "description": ""
+  },
+  {
+    "name": "Blue Lacy",
+    "url": "https://en.wikipedia.org/wiki/Blue_Lacy",
+    "description": ""
+  },
+  {
+    "name": "Blue Picardy Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Blue_Picardy_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Bluetick Coonhound",
+    "url": "https://en.wikipedia.org/wiki/Bluetick_Coonhound",
+    "description": ""
+  },
+  {
+    "name": "Boerboel",
+    "url": "https://en.wikipedia.org/wiki/Boerboel",
+    "description": ""
+  },
+  {
+    "name": "Bohemian Shepherd",
+    "url": "https://en.wikipedia.org/wiki/Bohemian_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Bohemian Spotted Dog",
+    "url": "https://en.wikipedia.org/wiki/Bohemian_Spotted_Dog",
+    "description": ""
+  },
+  {
+    "name": "Bolognese",
+    "url": "https://en.wikipedia.org/wiki/Bolognese_dog",
+    "description": ""
+  },
+  {
+    "name": "Bolonka",
+    "url": "https://en.wikipedia.org/wiki/Bolonka",
+    "description": ""
+  },
+  {
+    "name": "Border Collie",
+    "url": "https://en.wikipedia.org/wiki/Border_Collie",
+    "description": ""
+  },
+  {
+    "name": "Border Terrier",
+    "url": "https://en.wikipedia.org/wiki/Border_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Borzoi",
+    "url": "https://en.wikipedia.org/wiki/Borzoi",
+    "description": ""
+  },
+  {
+    "name": "Boston Terrier",
+    "url": "https://en.wikipedia.org/wiki/Boston_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Bouvier des Ardennes",
+    "url": "https://en.wikipedia.org/wiki/Bouvier_des_Ardennes",
+    "description": ""
+  },
+  {
+    "name": "Bouvier des Flandres",
+    "url": "https://en.wikipedia.org/wiki/Bouvier_des_Flandres",
+    "description": ""
+  },
+  {
+    "name": "Boxer",
+    "url": "https://en.wikipedia.org/wiki/Boxer_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Boykin Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Boykin_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Bracco Italiano",
+    "url": "https://en.wikipedia.org/wiki/Bracco_Italiano",
+    "description": ""
+  },
+  {
+    "name": "Braque d'Auvergne",
+    "url": "https://en.wikipedia.org/wiki/Braque_d%27Auvergne",
+    "description": ""
+  },
+  {
+    "name": "Braque du Bourbonnais",
+    "url": "https://en.wikipedia.org/wiki/Braque_du_Bourbonnais",
+    "description": ""
+  },
+  {
+    "name": "Braque Français",
+    "url": "https://en.wikipedia.org/wiki/Braque_Fran%C3%A7ais",
+    "description": ""
+  },
+  {
+    "name": "Braque Saint-Germain",
+    "url": "https://en.wikipedia.org/wiki/Braque_Saint-Germain",
+    "description": ""
+  },
+  {
+    "name": "Brazilian Terrier",
+    "url": "https://en.wikipedia.org/wiki/Brazilian_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Briard",
+    "url": "https://en.wikipedia.org/wiki/Briard",
+    "description": ""
+  },
+  {
+    "name": "Briquet de Provence",
+    "url": "https://en.wikipedia.org/wiki/Briquet_de_Provence",
+    "description": ""
+  },
+  {
+    "name": "Briquet Griffon Vendéen",
+    "url": "https://en.wikipedia.org/wiki/Briquet_Griffon_Vend%C3%A9en",
+    "description": ""
+  },
+  {
+    "name": "Brittany",
+    "url": "https://en.wikipedia.org/wiki/Brittany_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Broholmer",
+    "url": "https://en.wikipedia.org/wiki/Broholmer",
+    "description": ""
+  },
+  {
+    "name": "Bruno Jura Hound",
+    "url": "https://en.wikipedia.org/wiki/Bruno_Jura_Hound",
+    "description": ""
+  },
+  {
+    "name": "Bucovina Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/Bucovina_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Bulgarian Hound",
+    "url": "https://en.wikipedia.org/wiki/Bulgarian_Hound",
+    "description": ""
+  },
+  {
+    "name": "Bulgarian Scenthound",
+    "url": "https://en.wikipedia.org/wiki/Bulgarian_Scenthound",
+    "description": ""
+  },
+  {
+    "name": "Bull Arab",
+    "url": "https://en.wikipedia.org/wiki/Bull_Arab",
+    "description": ""
+  },
+  {
+    "name": "Bull Terrier",
+    "url": "https://en.wikipedia.org/wiki/Bull_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Bulldog",
+    "url": "https://en.wikipedia.org/wiki/Bulldog",
+    "description": ""
+  },
+  {
+    "name": "Bullmastiff",
+    "url": "https://en.wikipedia.org/wiki/Bullmastiff",
+    "description": ""
+  },
+  {
+    "name": "Bully Kutta",
+    "url": "https://en.wikipedia.org/wiki/Bully_Kutta",
+    "description": ""
+  },
+  {
+    "name": "Burgos Pointer",
+    "url": "https://en.wikipedia.org/wiki/Burgos_Pointer",
+    "description": ""
+  },
+  {
+    "name": "Ca Mè Mallorquí",
+    "url": "https://en.wikipedia.org/wiki/Ca_M%C3%A8_Mallorqu%C3%AD",
+    "description": ""
+  },
+  {
+    "name": "Ca de Bou",
+    "url": "https://en.wikipedia.org/wiki/Ca_de_Bou",
+    "description": ""
+  },
+  {
+    "name": "Ca Rater Mallorquí",
+    "url": "https://en.wikipedia.org/wiki/Ca_Rater_Mallorqu%C3%AD",
+    "description": ""
+  },
+  {
+    "name": "Cairn Terrier",
+    "url": "https://en.wikipedia.org/wiki/Cairn_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Calupoh",
+    "url": "https://en.wikipedia.org/wiki/Calupoh",
+    "description": ""
+  },
+  {
+    "name": "Campeiro Bulldog",
+    "url": "https://en.wikipedia.org/wiki/Campeiro_Bulldog",
+    "description": ""
+  },
+  {
+    "name": "Can de Chira",
+    "url": "https://en.wikipedia.org/wiki/Can_de_Chira",
+    "description": ""
+  },
+  {
+    "name": "Can de Palleiro",
+    "url": "https://en.wikipedia.org/wiki/Can_de_Palleiro",
+    "description": ""
+  },
+  {
+    "name": "Canaan Dog",
+    "url": "https://en.wikipedia.org/wiki/Canaan_Dog",
+    "description": ""
+  },
+  {
+    "name": "Canadian Eskimo Dog",
+    "url": "https://en.wikipedia.org/wiki/Canadian_Eskimo_Dog",
+    "description": ""
+  },
+  {
+    "name": "Cane Corso",
+    "url": "https://en.wikipedia.org/wiki/Cane_Corso",
+    "description": ""
+  },
+  {
+    "name": "Cane di Oropa",
+    "url": "https://en.wikipedia.org/wiki/Cane_di_Oropa",
+    "description": ""
+  },
+  {
+    "name": "Cane Paratore",
+    "url": "https://en.wikipedia.org/wiki/Cane_Paratore",
+    "description": ""
+  },
+  {
+    "name": "Cantabrian Water Dog",
+    "url": "https://en.wikipedia.org/wiki/Cantabrian_Water_Dog",
+    "description": ""
+  },
+  {
+    "name": "Cão de Gado Transmontano",
+    "url": "https://en.wikipedia.org/wiki/C%C3%A3o_de_Gado_Transmontano",
+    "description": ""
+  },
+  {
+    "name": "Cardigan Welsh Corgi",
+    "url": "https://en.wikipedia.org/wiki/Cardigan_Welsh_Corgi",
+    "description": ""
+  },
+  {
+    "name": "Carea Leonés",
+    "url": "https://en.wikipedia.org/wiki/Carea_Leon%C3%A9s",
+    "description": ""
+  },
+  {
+    "name": "Carolina Dog",
+    "url": "https://en.wikipedia.org/wiki/Carolina_Dog",
+    "description": ""
+  },
+  {
+    "name": "Carpathian Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/Carpathian_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Castro Laboreiro Dog",
+    "url": "https://en.wikipedia.org/wiki/Castro_Laboreiro_Dog",
+    "description": ""
+  },
+  {
+    "name": "Catahoula Leopard Dog",
+    "url": "https://en.wikipedia.org/wiki/Catahoula_Leopard_Dog",
+    "description": ""
+  },
+  {
+    "name": "Catalan Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Catalan_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Caucasian Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/Caucasian_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Cavalier King Charles Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Cavalier_King_Charles_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Central Asian Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/Central_Asian_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Český fousek",
+    "url": "https://en.wikipedia.org/wiki/%C4%8Cesk%C3%BD_fousek",
+    "description": ""
+  },
+  {
+    "name": "Cesky Terrier",
+    "url": "https://en.wikipedia.org/wiki/Cesky_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Chesapeake Bay Retriever",
+    "url": "https://en.wikipedia.org/wiki/Chesapeake_Bay_Retriever",
+    "description": ""
+  },
+  {
+    "name": "Chien Français Blanc et Noir",
+    "url": "https://en.wikipedia.org/wiki/Chien_Fran%C3%A7ais_Blanc_et_Noir",
+    "description": ""
+  },
+  {
+    "name": "Chien Français Blanc et Orange",
+    "url": "https://en.wikipedia.org/wiki/Chien_Fran%C3%A7ais_Blanc_et_Orange",
+    "description": ""
+  },
+  {
+    "name": "Chien Français Tricolore",
+    "url": "https://en.wikipedia.org/wiki/Chien_Fran%C3%A7ais_Tricolore",
+    "description": ""
+  },
+  {
+    "name": "Chihuahua",
+    "url": "https://en.wikipedia.org/wiki/Chihuahua_(dog_breed)",
+    "description": ""
+  },
+  {
+    "name": "Chilean Terrier",
+    "url": "https://en.wikipedia.org/wiki/Chilean_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Chinese Crested Dog",
+    "url": "https://en.wikipedia.org/wiki/Chinese_Crested_Dog",
+    "description": ""
+  },
+  {
+    "name": "Chinook",
+    "url": "https://en.wikipedia.org/wiki/Chinook_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Chippiparai",
+    "url": "https://en.wikipedia.org/wiki/Chippiparai",
+    "description": ""
+  },
+  {
+    "name": "Chongqing",
+    "url": "https://en.wikipedia.org/wiki/Chongqing_dog",
+    "description": ""
+  },
+  {
+    "name": "Chortai",
+    "url": "https://en.wikipedia.org/wiki/Chortai",
+    "description": ""
+  },
+  {
+    "name": "Chow Chow",
+    "url": "https://en.wikipedia.org/wiki/Chow_Chow",
+    "description": ""
+  },
+  {
+    "name": "Chukotka sled dog",
+    "url": "https://en.wikipedia.org/wiki/Chukotka_sled_dog",
+    "description": ""
+  },
+  {
+    "name": "Cimarrón Uruguayo",
+    "url": "https://en.wikipedia.org/wiki/Cimarr%C3%B3n_Uruguayo",
+    "description": ""
+  },
+  {
+    "name": "Cirneco dell'Etna",
+    "url": "https://en.wikipedia.org/wiki/Cirneco_dell%27Etna",
+    "description": ""
+  },
+  {
+    "name": "Clumber Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Clumber_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Colombian Fino Hound",
+    "url": "https://en.wikipedia.org/wiki/Colombian_Fino_Hound",
+    "description": ""
+  },
+  {
+    "name": "Continental bulldog",
+    "url": "https://en.wikipedia.org/wiki/Continental_bulldog",
+    "description": ""
+  },
+  {
+    "name": "Corsican Dog",
+    "url": "https://en.wikipedia.org/wiki/Corsican_Dog",
+    "description": ""
+  },
+  {
+    "name": "Coton de Tulear",
+    "url": "https://en.wikipedia.org/wiki/Coton_de_Tulear",
+    "description": ""
+  },
+  {
+    "name": "Cretan Hound",
+    "url": "https://en.wikipedia.org/wiki/Cretan_Hound",
+    "description": ""
+  },
+  {
+    "name": "Croatian Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Croatian_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Curly-coated Retriever",
+    "url": "https://en.wikipedia.org/wiki/Curly-coated_Retriever",
+    "description": ""
+  },
+  {
+    "name": "Czechoslovakian Wolfdog",
+    "url": "https://en.wikipedia.org/wiki/Czechoslovakian_Wolfdog",
+    "description": ""
+  },
+  {
+    "name": "Dachshund",
+    "url": "https://en.wikipedia.org/wiki/Dachshund",
+    "description": ""
+  },
+  {
+    "name": "Dalmatian",
+    "url": "https://en.wikipedia.org/wiki/Dalmatian_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Dandie Dinmont Terrier",
+    "url": "https://en.wikipedia.org/wiki/Dandie_Dinmont_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Danish Spitz",
+    "url": "https://en.wikipedia.org/wiki/Danish_Spitz",
+    "description": ""
+  },
+  {
+    "name": "Danish–Swedish Farmdog",
+    "url": "https://en.wikipedia.org/wiki/Danish%E2%80%93Swedish_Farmdog",
+    "description": ""
+  },
+  {
+    "name": "Denmark Feist",
+    "url": "https://en.wikipedia.org/wiki/Denmark_Feist",
+    "description": ""
+  },
+  {
+    "name": "Dikkulak",
+    "url": "https://en.wikipedia.org/wiki/Dikkulak",
+    "description": ""
+  },
+  {
+    "name": "Dingo",
+    "url": "https://en.wikipedia.org/wiki/Dingo",
+    "description": ""
+  },
+  {
+    "name": "Dobermann",
+    "url": "https://en.wikipedia.org/wiki/Dobermann",
+    "description": ""
+  },
+  {
+    "name": "Dogo Argentino",
+    "url": "https://en.wikipedia.org/wiki/Dogo_Argentino",
+    "description": ""
+  },
+  {
+    "name": "Dogo Sardesco",
+    "url": "https://en.wikipedia.org/wiki/Dogo_Sardesco",
+    "description": ""
+  },
+  {
+    "name": "Dogue Brasileiro",
+    "url": "https://en.wikipedia.org/wiki/Dogue_Brasileiro",
+    "description": ""
+  },
+  {
+    "name": "Dogue de Bordeaux",
+    "url": "https://en.wikipedia.org/wiki/Dogue_de_Bordeaux",
+    "description": ""
+  },
+  {
+    "name": "Donggyeongi",
+    "url": "https://en.wikipedia.org/wiki/Donggyeongi",
+    "description": ""
+  },
+  {
+    "name": "Drentse Patrijshond",
+    "url": "https://en.wikipedia.org/wiki/Drentse_Patrijshond",
+    "description": ""
+  },
+  {
+    "name": "Drever",
+    "url": "https://en.wikipedia.org/wiki/Drever",
+    "description": ""
+  },
+  {
+    "name": "Dunker",
+    "url": "https://en.wikipedia.org/wiki/Dunker",
+    "description": ""
+  },
+  {
+    "name": "Dutch Shepherd",
+    "url": "https://en.wikipedia.org/wiki/Dutch_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Dutch Smoushond",
+    "url": "https://en.wikipedia.org/wiki/Dutch_Smoushond",
+    "description": ""
+  },
+  {
+    "name": "East Siberian Laika",
+    "url": "https://en.wikipedia.org/wiki/East_Siberian_Laika",
+    "description": ""
+  },
+  {
+    "name": "East European Shepherd",
+    "url": "https://en.wikipedia.org/wiki/East_European_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Ecuadorian Hairless Dog",
+    "url": "https://en.wikipedia.org/wiki/Ecuadorian_Hairless_Dog",
+    "description": ""
+  },
+  {
+    "name": "English Cocker Spaniel",
+    "url": "https://en.wikipedia.org/wiki/English_Cocker_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "English Foxhound",
+    "url": "https://en.wikipedia.org/wiki/English_Foxhound",
+    "description": ""
+  },
+  {
+    "name": "English Mastiff",
+    "url": "https://en.wikipedia.org/wiki/English_Mastiff",
+    "description": ""
+  },
+  {
+    "name": "English Setter",
+    "url": "https://en.wikipedia.org/wiki/English_Setter",
+    "description": ""
+  },
+  {
+    "name": "English Shepherd",
+    "url": "https://en.wikipedia.org/wiki/English_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "English Springer Spaniel",
+    "url": "https://en.wikipedia.org/wiki/English_Springer_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "English Toy Terrier (Black & Tan)",
+    "url": "https://en.wikipedia.org/wiki/English_Toy_Terrier_(Black_%26_Tan)",
+    "description": ""
+  },
+  {
+    "name": "Entlebucher Mountain Dog",
+    "url": "https://en.wikipedia.org/wiki/Entlebucher_Mountain_Dog",
+    "description": ""
+  },
+  {
+    "name": "Erbi Txakur",
+    "url": "https://en.wikipedia.org/wiki/Erbi_Txakur",
+    "description": ""
+  },
+  {
+    "name": "Estonian Hound",
+    "url": "https://en.wikipedia.org/wiki/Estonian_Hound",
+    "description": ""
+  },
+  {
+    "name": "Estrela Mountain Dog",
+    "url": "https://en.wikipedia.org/wiki/Estrela_Mountain_Dog",
+    "description": ""
+  },
+  {
+    "name": "Eurasier",
+    "url": "https://en.wikipedia.org/wiki/Eurasier",
+    "description": ""
+  },
+  {
+    "name": "Faroese Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Faroese_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Field Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Field_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Fila Brasileiro",
+    "url": "https://en.wikipedia.org/wiki/Fila_Brasileiro",
+    "description": ""
+  },
+  {
+    "name": "Finnish Hound",
+    "url": "https://en.wikipedia.org/wiki/Finnish_Hound",
+    "description": ""
+  },
+  {
+    "name": "Finnish Lapphund",
+    "url": "https://en.wikipedia.org/wiki/Finnish_Lapphund",
+    "description": ""
+  },
+  {
+    "name": "Finnish Spitz",
+    "url": "https://en.wikipedia.org/wiki/Finnish_Spitz",
+    "description": ""
+  },
+  {
+    "name": "Flat-coated Retriever",
+    "url": "https://en.wikipedia.org/wiki/Flat-coated_Retriever",
+    "description": ""
+  },
+  {
+    "name": "Florida Brown Dog a/k/a Florida Cracker Cur",
+    "url": "https://en.wikipedia.org/wiki/Black_Mouth_Cur#Florida_counterpart",
+    "description": ""
+  },
+  {
+    "name": "French Bulldog",
+    "url": "https://en.wikipedia.org/wiki/French_Bulldog",
+    "description": ""
+  },
+  {
+    "name": "French Spaniel",
+    "url": "https://en.wikipedia.org/wiki/French_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Galgo Español",
+    "url": "https://en.wikipedia.org/wiki/Galgo_Espa%C3%B1ol",
+    "description": ""
+  },
+  {
+    "name": "Gascon Saintongeois",
+    "url": "https://en.wikipedia.org/wiki/Gascon_Saintongeois",
+    "description": ""
+  },
+  {
+    "name": "Gaucho sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Gaucho_sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Georgian Shepherd",
+    "url": "https://en.wikipedia.org/wiki/Georgian_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "German Hound",
+    "url": "https://en.wikipedia.org/wiki/German_Hound",
+    "description": ""
+  },
+  {
+    "name": "German Longhaired Pointer",
+    "url": "https://en.wikipedia.org/wiki/German_Longhaired_Pointer",
+    "description": ""
+  },
+  {
+    "name": "German Pinscher",
+    "url": "https://en.wikipedia.org/wiki/German_Pinscher",
+    "description": ""
+  },
+  {
+    "name": "German Roughhaired Pointer",
+    "url": "https://en.wikipedia.org/wiki/German_Roughhaired_Pointer",
+    "description": ""
+  },
+  {
+    "name": "German Shepherd",
+    "url": "https://en.wikipedia.org/wiki/German_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "German Shorthaired Pointer",
+    "url": "https://en.wikipedia.org/wiki/German_Shorthaired_Pointer",
+    "description": ""
+  },
+  {
+    "name": "German Spaniel",
+    "url": "https://en.wikipedia.org/wiki/German_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "German Spitz",
+    "url": "https://en.wikipedia.org/wiki/German_Spitz",
+    "description": ""
+  },
+  {
+    "name": "German Wirehaired Pointer",
+    "url": "https://en.wikipedia.org/wiki/German_Wirehaired_Pointer",
+    "description": ""
+  },
+  {
+    "name": "Giant Schnauzer",
+    "url": "https://en.wikipedia.org/wiki/Giant_Schnauzer",
+    "description": ""
+  },
+  {
+    "name": "Glen of Imaal Terrier",
+    "url": "https://en.wikipedia.org/wiki/Glen_of_Imaal_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Golden Retriever",
+    "url": "https://en.wikipedia.org/wiki/Golden_Retriever",
+    "description": ""
+  },
+  {
+    "name": "Gończy Polski",
+    "url": "https://en.wikipedia.org/wiki/Go%C5%84czy_Polski",
+    "description": ""
+  },
+  {
+    "name": "Gordon Setter",
+    "url": "https://en.wikipedia.org/wiki/Gordon_Setter",
+    "description": ""
+  },
+  {
+    "name": "Grand Anglo-Français Blanc et Noir",
+    "url": "https://en.wikipedia.org/wiki/Grand_Anglo-Fran%C3%A7ais_Blanc_et_Noir",
+    "description": ""
+  },
+  {
+    "name": "Grand Anglo-Français Blanc et Orange",
+    "url": "https://en.wikipedia.org/wiki/Grand_Anglo-Fran%C3%A7ais_Blanc_et_Orange",
+    "description": ""
+  },
+  {
+    "name": "Grand Anglo-Français Tricolore",
+    "url": "https://en.wikipedia.org/wiki/Grand_Anglo-Fran%C3%A7ais_Tricolore",
+    "description": ""
+  },
+  {
+    "name": "Grand Basset Griffon Vendéen",
+    "url": "https://en.wikipedia.org/wiki/Grand_Basset_Griffon_Vend%C3%A9en",
+    "description": ""
+  },
+  {
+    "name": "Grand Bleu de Gascogne",
+    "url": "https://en.wikipedia.org/wiki/Grand_Bleu_de_Gascogne",
+    "description": ""
+  },
+  {
+    "name": "Grand Griffon Vendéen",
+    "url": "https://en.wikipedia.org/wiki/Grand_Griffon_Vend%C3%A9en",
+    "description": ""
+  },
+  {
+    "name": "Great Dane",
+    "url": "https://en.wikipedia.org/wiki/Great_Dane",
+    "description": ""
+  },
+  {
+    "name": "Greater Swiss Mountain Dog",
+    "url": "https://en.wikipedia.org/wiki/Greater_Swiss_Mountain_Dog",
+    "description": ""
+  },
+  {
+    "name": "Greek Harehound",
+    "url": "https://en.wikipedia.org/wiki/Greek_Harehound",
+    "description": ""
+  },
+  {
+    "name": "Greek Shepherd",
+    "url": "https://en.wikipedia.org/wiki/Greek_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Greenland Dog",
+    "url": "https://en.wikipedia.org/wiki/Greenland_Dog",
+    "description": ""
+  },
+  {
+    "name": "Greyhound",
+    "url": "https://en.wikipedia.org/wiki/Greyhound",
+    "description": ""
+  },
+  {
+    "name": "Griffon Bleu de Gascogne",
+    "url": "https://en.wikipedia.org/wiki/Griffon_Bleu_de_Gascogne",
+    "description": ""
+  },
+  {
+    "name": "Griffon Bruxellois",
+    "url": "https://en.wikipedia.org/wiki/Griffon_Bruxellois",
+    "description": ""
+  },
+  {
+    "name": "Griffon Fauve de Bretagne",
+    "url": "https://en.wikipedia.org/wiki/Griffon_Fauve_de_Bretagne",
+    "description": ""
+  },
+  {
+    "name": "Griffon Nivernais",
+    "url": "https://en.wikipedia.org/wiki/Griffon_Nivernais",
+    "description": ""
+  },
+  {
+    "name": "Gull Dong",
+    "url": "https://en.wikipedia.org/wiki/Gull_Dong",
+    "description": ""
+  },
+  {
+    "name": "Gull Terrier",
+    "url": "https://en.wikipedia.org/wiki/Gull_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Hällefors Elkhound",
+    "url": "https://en.wikipedia.org/wiki/H%C3%A4llefors_Elkhound",
+    "description": ""
+  },
+  {
+    "name": "Halden Hound",
+    "url": "https://en.wikipedia.org/wiki/Halden_Hound",
+    "description": ""
+  },
+  {
+    "name": "Hamiltonstövare",
+    "url": "https://en.wikipedia.org/wiki/Hamiltonst%C3%B6vare",
+    "description": ""
+  },
+  {
+    "name": "Hanover Hound",
+    "url": "https://en.wikipedia.org/wiki/Hanover_Hound",
+    "description": ""
+  },
+  {
+    "name": "Harrier",
+    "url": "https://en.wikipedia.org/wiki/Harrier_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Havanese",
+    "url": "https://en.wikipedia.org/wiki/Havanese_dog",
+    "description": ""
+  },
+  {
+    "name": "Himalayan Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Himalayan_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Hmong bobtail dog",
+    "url": "https://en.wikipedia.org/wiki/Hmong_bobtail_dog",
+    "description": ""
+  },
+  {
+    "name": "Hokkaido",
+    "url": "https://en.wikipedia.org/wiki/Hokkaido_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Hovawart",
+    "url": "https://en.wikipedia.org/wiki/Hovawart",
+    "description": ""
+  },
+  {
+    "name": "Huntaway",
+    "url": "https://en.wikipedia.org/wiki/Huntaway",
+    "description": ""
+  },
+  {
+    "name": "Hygen Hound",
+    "url": "https://en.wikipedia.org/wiki/Hygen_Hound",
+    "description": ""
+  },
+  {
+    "name": "Ibizan Hound",
+    "url": "https://en.wikipedia.org/wiki/Ibizan_Hound",
+    "description": ""
+  },
+  {
+    "name": "Icelandic Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Icelandic_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Indian pariah dog",
+    "url": "https://en.wikipedia.org/wiki/Indian_pariah_dog",
+    "description": ""
+  },
+  {
+    "name": "Indian Spitz",
+    "url": "https://en.wikipedia.org/wiki/Indian_Spitz",
+    "description": ""
+  },
+  {
+    "name": "Irish Red and White Setter",
+    "url": "https://en.wikipedia.org/wiki/Irish_Red_and_White_Setter",
+    "description": ""
+  },
+  {
+    "name": "Irish Setter",
+    "url": "https://en.wikipedia.org/wiki/Irish_Setter",
+    "description": ""
+  },
+  {
+    "name": "Irish Terrier",
+    "url": "https://en.wikipedia.org/wiki/Irish_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Irish Water Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Irish_Water_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Irish Wolfhound",
+    "url": "https://en.wikipedia.org/wiki/Irish_Wolfhound",
+    "description": ""
+  },
+  {
+    "name": "Istrian Coarse-haired Hound",
+    "url": "https://en.wikipedia.org/wiki/Istrian_Coarse-haired_Hound",
+    "description": ""
+  },
+  {
+    "name": "Istrian Shorthaired Hound",
+    "url": "https://en.wikipedia.org/wiki/Istrian_Shorthaired_Hound",
+    "description": ""
+  },
+  {
+    "name": "Italian Greyhound",
+    "url": "https://en.wikipedia.org/wiki/Italian_Greyhound",
+    "description": ""
+  },
+  {
+    "name": "Jack Russell Terrier",
+    "url": "https://en.wikipedia.org/wiki/Jack_Russell_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Jagdterrier",
+    "url": "https://en.wikipedia.org/wiki/Jagdterrier",
+    "description": ""
+  },
+  {
+    "name": "Jämthund",
+    "url": "https://en.wikipedia.org/wiki/J%C3%A4mthund",
+    "description": ""
+  },
+  {
+    "name": "Japanese Chin",
+    "url": "https://en.wikipedia.org/wiki/Japanese_Chin",
+    "description": ""
+  },
+  {
+    "name": "Japanese Spitz",
+    "url": "https://en.wikipedia.org/wiki/Japanese_Spitz",
+    "description": ""
+  },
+  {
+    "name": "Japanese Terrier",
+    "url": "https://en.wikipedia.org/wiki/Japanese_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Jeju",
+    "url": "https://en.wikipedia.org/wiki/Jeju_dog",
+    "description": ""
+  },
+  {
+    "name": "Jindo",
+    "url": "https://en.wikipedia.org/wiki/Korean_Jindo",
+    "description": ""
+  },
+  {
+    "name": "Jonangi",
+    "url": "https://en.wikipedia.org/wiki/Jonangi",
+    "description": ""
+  },
+  {
+    "name": "Kai Ken",
+    "url": "https://en.wikipedia.org/wiki/Kai_Ken",
+    "description": ""
+  },
+  {
+    "name": "Kaikadi",
+    "url": "https://en.wikipedia.org/wiki/Kaikadi_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Kamchatka Sled Dog",
+    "url": "https://en.wikipedia.org/wiki/Kamchatka_Sled_Dog",
+    "description": ""
+  },
+  {
+    "name": "Kangal Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/Kangal_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Kanni",
+    "url": "https://en.wikipedia.org/wiki/Kanni",
+    "description": ""
+  },
+  {
+    "name": "Karakachan",
+    "url": "https://en.wikipedia.org/wiki/Karakachan_dog",
+    "description": ""
+  },
+  {
+    "name": "Karelian Bear Dog",
+    "url": "https://en.wikipedia.org/wiki/Karelian_Bear_Dog",
+    "description": ""
+  },
+  {
+    "name": "Karelo-Finnish Laika",
+    "url": "https://en.wikipedia.org/wiki/Karelo-Finnish_Laika",
+    "description": ""
+  },
+  {
+    "name": "Kars",
+    "url": "https://en.wikipedia.org/wiki/Kars_dog",
+    "description": ""
+  },
+  {
+    "name": "Karst Shepherd",
+    "url": "https://en.wikipedia.org/wiki/Karst_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Kazakh Tazy",
+    "url": "https://en.wikipedia.org/wiki/Kazakh_Tazy",
+    "description": ""
+  },
+  {
+    "name": "Keeshond",
+    "url": "https://en.wikipedia.org/wiki/Keeshond",
+    "description": ""
+  },
+  {
+    "name": "Kerry Beagle",
+    "url": "https://en.wikipedia.org/wiki/Kerry_Beagle",
+    "description": ""
+  },
+  {
+    "name": "Kerry Blue Terrier",
+    "url": "https://en.wikipedia.org/wiki/Kerry_Blue_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Khala",
+    "url": "https://en.wikipedia.org/wiki/Khala_(dog_breed)",
+    "description": ""
+  },
+  {
+    "name": "King Charles Spaniel",
+    "url": "https://en.wikipedia.org/wiki/King_Charles_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "King Shepherd",
+    "url": "https://en.wikipedia.org/wiki/King_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Kintamani",
+    "url": "https://en.wikipedia.org/wiki/Kintamani_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Kishu",
+    "url": "https://en.wikipedia.org/wiki/Kishu",
+    "description": ""
+  },
+  {
+    "name": "Kokoni",
+    "url": "https://en.wikipedia.org/wiki/Kokoni",
+    "description": ""
+  },
+  {
+    "name": "Kombai",
+    "url": "https://en.wikipedia.org/wiki/Kombai_dog",
+    "description": ""
+  },
+  {
+    "name": "Komondor",
+    "url": "https://en.wikipedia.org/wiki/Komondor",
+    "description": ""
+  },
+  {
+    "name": "Kooikerhondje",
+    "url": "https://en.wikipedia.org/wiki/Kooikerhondje",
+    "description": ""
+  },
+  {
+    "name": "Koolie",
+    "url": "https://en.wikipedia.org/wiki/Koolie",
+    "description": ""
+  },
+  {
+    "name": "Kromfohrländer",
+    "url": "https://en.wikipedia.org/wiki/Kromfohrl%C3%A4nder",
+    "description": ""
+  },
+  {
+    "name": "Kuchi",
+    "url": "https://en.wikipedia.org/wiki/Kuchi_dog",
+    "description": ""
+  },
+  {
+    "name": "Kunma",
+    "url": "https://en.wikipedia.org/wiki/Kunma_Dog",
+    "description": ""
+  },
+  {
+    "name": "Kunming",
+    "url": "https://en.wikipedia.org/wiki/Kunming_dog",
+    "description": ""
+  },
+  {
+    "name": "Kurdish Mastiff",
+    "url": "https://en.wikipedia.org/wiki/Kurdish_Mastiff",
+    "description": ""
+  },
+  {
+    "name": "Kuvasz",
+    "url": "https://en.wikipedia.org/wiki/Kuvasz",
+    "description": ""
+  },
+  {
+    "name": "Labrador Retriever",
+    "url": "https://en.wikipedia.org/wiki/Labrador_Retriever",
+    "description": ""
+  },
+  {
+    "name": "Lagotto Romagnolo",
+    "url": "https://en.wikipedia.org/wiki/Lagotto_Romagnolo",
+    "description": ""
+  },
+  {
+    "name": "Lài",
+    "url": "https://en.wikipedia.org/wiki/L%C3%A0i_dog",
+    "description": ""
+  },
+  {
+    "name": "Laizhou Hong",
+    "url": "https://en.wikipedia.org/wiki/Laizhou_Hong",
+    "description": ""
+  },
+  {
+    "name": "Lakeland Terrier",
+    "url": "https://en.wikipedia.org/wiki/Lakeland_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Lancashire Heeler",
+    "url": "https://en.wikipedia.org/wiki/Lancashire_Heeler",
+    "description": ""
+  },
+  {
+    "name": "Landseer",
+    "url": "https://en.wikipedia.org/wiki/Landseer_dog",
+    "description": ""
+  },
+  {
+    "name": "Langqing",
+    "url": "https://en.wikipedia.org/wiki/Langqing_Quan",
+    "description": ""
+  },
+  {
+    "name": "Lapponian Herder",
+    "url": "https://en.wikipedia.org/wiki/Lapponian_Herder",
+    "description": ""
+  },
+  {
+    "name": "Large Münsterländer",
+    "url": "https://en.wikipedia.org/wiki/Large_M%C3%BCnsterl%C3%A4nder",
+    "description": ""
+  },
+  {
+    "name": "Leonberger",
+    "url": "https://en.wikipedia.org/wiki/Leonberger",
+    "description": ""
+  },
+  {
+    "name": "Levriero Sardo",
+    "url": "https://en.wikipedia.org/wiki/Levriero_Sardo",
+    "description": ""
+  },
+  {
+    "name": "Lhasa Apso",
+    "url": "https://en.wikipedia.org/wiki/Lhasa_Apso",
+    "description": ""
+  },
+  {
+    "name": "Liangshan Dog",
+    "url": "https://en.wikipedia.org/wiki/Liangshan_Dog",
+    "description": ""
+  },
+  {
+    "name": "Lithuanian Hound",
+    "url": "https://en.wikipedia.org/wiki/Lithuanian_Hound",
+    "description": ""
+  },
+  {
+    "name": "Lobito Herreño",
+    "url": "https://en.wikipedia.org/wiki/Lobito_Herre%C3%B1o",
+    "description": ""
+  },
+  {
+    "name": "Löwchen",
+    "url": "https://en.wikipedia.org/wiki/L%C3%B6wchen",
+    "description": ""
+  },
+  {
+    "name": "Lucas Terrier",
+    "url": "https://en.wikipedia.org/wiki/Lucas_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Lupo Italiano",
+    "url": "https://en.wikipedia.org/wiki/Lupo_Italiano",
+    "description": ""
+  },
+  {
+    "name": "Mackenzie River Husky",
+    "url": "https://en.wikipedia.org/wiki/Mackenzie_River_Husky",
+    "description": ""
+  },
+  {
+    "name": "Magyar Agár",
+    "url": "https://en.wikipedia.org/wiki/Magyar_Ag%C3%A1r",
+    "description": ""
+  },
+  {
+    "name": "Mahratta Hound",
+    "url": "https://en.wikipedia.org/wiki/Mahratta_Hound",
+    "description": ""
+  },
+  {
+    "name": "Majorca Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/Majorca_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Maltese",
+    "url": "https://en.wikipedia.org/wiki/Maltese_dog",
+    "description": ""
+  },
+  {
+    "name": "Manchester Terrier",
+    "url": "https://en.wikipedia.org/wiki/Manchester_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Maneto",
+    "url": "https://en.wikipedia.org/wiki/Maneto",
+    "description": ""
+  },
+  {
+    "name": "Markiesje",
+    "url": "https://en.wikipedia.org/wiki/Markiesje",
+    "description": ""
+  },
+  {
+    "name": "Maremmano-Abruzzese Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Maremmano-Abruzzese_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "McNab",
+    "url": "https://en.wikipedia.org/wiki/McNab_dog",
+    "description": ""
+  },
+  {
+    "name": "Miniature American Shepherd",
+    "url": "https://en.wikipedia.org/wiki/Miniature_American_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Miniature Bull Terrier",
+    "url": "https://en.wikipedia.org/wiki/Miniature_Bull_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Miniature Fox Terrier",
+    "url": "https://en.wikipedia.org/wiki/Miniature_Fox_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Miniature Pinscher",
+    "url": "https://en.wikipedia.org/wiki/Miniature_Pinscher",
+    "description": ""
+  },
+  {
+    "name": "Miniature Schnauzer",
+    "url": "https://en.wikipedia.org/wiki/Miniature_Schnauzer",
+    "description": ""
+  },
+  {
+    "name": "Mojee",
+    "url": "https://en.wikipedia.org/wiki/Mojee",
+    "description": ""
+  },
+  {
+    "name": "Molossus of Epirus",
+    "url": "https://en.wikipedia.org/wiki/Molossus_of_Epirus",
+    "description": ""
+  },
+  {
+    "name": "Mongrel",
+    "url": "https://en.wikipedia.org/wiki/Mongrel",
+    "description": ""
+  },
+  {
+    "name": "Montenegrin Mountain Hound",
+    "url": "https://en.wikipedia.org/wiki/Montenegrin_Mountain_Hound",
+    "description": ""
+  },
+  {
+    "name": "Moscow Watchdog",
+    "url": "https://en.wikipedia.org/wiki/Moscow_Watchdog",
+    "description": ""
+  },
+  {
+    "name": "Mountain Cur",
+    "url": "https://en.wikipedia.org/wiki/Mountain_Cur",
+    "description": ""
+  },
+  {
+    "name": "Mountain Feist",
+    "url": "https://en.wikipedia.org/wiki/Mountain_Feist",
+    "description": ""
+  },
+  {
+    "name": "Mudhol Hound",
+    "url": "https://en.wikipedia.org/wiki/Mudhol_Hound",
+    "description": ""
+  },
+  {
+    "name": "Mudi",
+    "url": "https://en.wikipedia.org/wiki/Mudi",
+    "description": ""
+  },
+  {
+    "name": "Neapolitan Mastiff",
+    "url": "https://en.wikipedia.org/wiki/Neapolitan_Mastiff",
+    "description": ""
+  },
+  {
+    "name": "Nenets Herding Laika",
+    "url": "https://en.wikipedia.org/wiki/Nenets_Herding_Laika",
+    "description": ""
+  },
+  {
+    "name": "New Guinea singing dog",
+    "url": "https://en.wikipedia.org/wiki/New_Guinea_singing_dog",
+    "description": ""
+  },
+  {
+    "name": "New Zealand Heading Dog",
+    "url": "https://en.wikipedia.org/wiki/New_Zealand_Heading_Dog",
+    "description": ""
+  },
+  {
+    "name": "Newfoundland",
+    "url": "https://en.wikipedia.org/wiki/Newfoundland_dog",
+    "description": ""
+  },
+  {
+    "name": "Norfolk Terrier",
+    "url": "https://en.wikipedia.org/wiki/Norfolk_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Norrbottenspets",
+    "url": "https://en.wikipedia.org/wiki/Norrbottenspets",
+    "description": ""
+  },
+  {
+    "name": "Northern Inuit Dog",
+    "url": "https://en.wikipedia.org/wiki/Northern_Inuit_Dog",
+    "description": ""
+  },
+  {
+    "name": "Norwegian Buhund",
+    "url": "https://en.wikipedia.org/wiki/Norwegian_Buhund",
+    "description": ""
+  },
+  {
+    "name": "Norwegian Elkhound",
+    "url": "https://en.wikipedia.org/wiki/Norwegian_Elkhound",
+    "description": ""
+  },
+  {
+    "name": "Norwegian Lundehund",
+    "url": "https://en.wikipedia.org/wiki/Norwegian_Lundehund",
+    "description": ""
+  },
+  {
+    "name": "Norwich Terrier",
+    "url": "https://en.wikipedia.org/wiki/Norwich_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Nova Scotia Duck Tolling Retriever",
+    "url": "https://en.wikipedia.org/wiki/Nova_Scotia_Duck_Tolling_Retriever",
+    "description": ""
+  },
+  {
+    "name": "Nureongi",
+    "url": "https://en.wikipedia.org/wiki/Nureongi",
+    "description": ""
+  },
+  {
+    "name": "Old Danish Pointer",
+    "url": "https://en.wikipedia.org/wiki/Old_Danish_Pointer",
+    "description": ""
+  },
+  {
+    "name": "Old English Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Old_English_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Olde English Bulldogge",
+    "url": "https://en.wikipedia.org/wiki/Olde_English_Bulldogge",
+    "description": ""
+  },
+  {
+    "name": "Otterhound",
+    "url": "https://en.wikipedia.org/wiki/Otterhound",
+    "description": ""
+  },
+  {
+    "name": "Pachón Navarro",
+    "url": "https://en.wikipedia.org/wiki/Pach%C3%B3n_Navarro",
+    "description": ""
+  },
+  {
+    "name": "Pampas Deerhound",
+    "url": "https://en.wikipedia.org/wiki/Pampas_Deerhound",
+    "description": ""
+  },
+  {
+    "name": "Papillon",
+    "url": "https://en.wikipedia.org/wiki/Papillon_dog",
+    "description": ""
+  },
+  {
+    "name": "Parson Russell Terrier",
+    "url": "https://en.wikipedia.org/wiki/Parson_Russell_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Pastor Garafiano",
+    "url": "https://en.wikipedia.org/wiki/Pastor_Garafiano",
+    "description": ""
+  },
+  {
+    "name": "Pastore della Lessinia e del Lagorai",
+    "url": "https://en.wikipedia.org/wiki/Pastore_della_Lessinia_e_del_Lagorai",
+    "description": ""
+  },
+  {
+    "name": "Patagonian Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Patagonian_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Patterdale Terrier",
+    "url": "https://en.wikipedia.org/wiki/Patterdale_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Pekingese",
+    "url": "https://en.wikipedia.org/wiki/Pekingese",
+    "description": ""
+  },
+  {
+    "name": "Pembroke Welsh Corgi",
+    "url": "https://en.wikipedia.org/wiki/Pembroke_Welsh_Corgi",
+    "description": ""
+  },
+  {
+    "name": "Perdigueiro Galego",
+    "url": "https://en.wikipedia.org/wiki/Perdigueiro_Galego",
+    "description": ""
+  },
+  {
+    "name": "Perro Majorero",
+    "url": "https://en.wikipedia.org/wiki/Perro_Majorero",
+    "description": ""
+  },
+  {
+    "name": "Peruvian Hairless Dog",
+    "url": "https://en.wikipedia.org/wiki/Peruvian_Hairless_Dog",
+    "description": ""
+  },
+  {
+    "name": "Petit Basset Griffon Vendéen",
+    "url": "https://en.wikipedia.org/wiki/Petit_Basset_Griffon_Vend%C3%A9en",
+    "description": ""
+  },
+  {
+    "name": "Petit Bleu de Gascogne",
+    "url": "https://en.wikipedia.org/wiki/Petit_Bleu_de_Gascogne",
+    "description": ""
+  },
+  {
+    "name": "Phalène",
+    "url": "https://en.wikipedia.org/wiki/Phal%C3%A8ne",
+    "description": ""
+  },
+  {
+    "name": "Pharaoh Hound",
+    "url": "https://en.wikipedia.org/wiki/Pharaoh_Hound",
+    "description": ""
+  },
+  {
+    "name": "Philippine forest dog",
+    "url": "https://en.wikipedia.org/wiki/Philippine_forest_dog",
+    "description": ""
+  },
+  {
+    "name": "Phu Quoc Ridgeback",
+    "url": "https://en.wikipedia.org/wiki/Phu_Quoc_Ridgeback",
+    "description": ""
+  },
+  {
+    "name": "Picardy Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Picardy_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Plummer Terrier",
+    "url": "https://en.wikipedia.org/wiki/Plummer_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Plott Hound",
+    "url": "https://en.wikipedia.org/wiki/Plott_Hound",
+    "description": ""
+  },
+  {
+    "name": "Podenco Andaluz",
+    "url": "https://en.wikipedia.org/wiki/Podenco_Andaluz",
+    "description": ""
+  },
+  {
+    "name": "Podenco Canario",
+    "url": "https://en.wikipedia.org/wiki/Podenco_Canario",
+    "description": ""
+  },
+  {
+    "name": "Podenco Valenciano",
+    "url": "https://en.wikipedia.org/wiki/Podenco_Valenciano",
+    "description": ""
+  },
+  {
+    "name": "Pointer",
+    "url": "https://en.wikipedia.org/wiki/Pointer_(dog_breed)",
+    "description": ""
+  },
+  {
+    "name": "Poitevin",
+    "url": "https://en.wikipedia.org/wiki/Poitevin_hound",
+    "description": ""
+  },
+  {
+    "name": "Polish Greyhound",
+    "url": "https://en.wikipedia.org/wiki/Polish_Greyhound",
+    "description": ""
+  },
+  {
+    "name": "Polish Hound",
+    "url": "https://en.wikipedia.org/wiki/Polish_Hound",
+    "description": ""
+  },
+  {
+    "name": "Polish Lowland Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Polish_Lowland_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Pomeranian",
+    "url": "https://en.wikipedia.org/wiki/Pomeranian_dog",
+    "description": ""
+  },
+  {
+    "name": "Pont-Audemer Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Pont-Audemer_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Poodle",
+    "url": "https://en.wikipedia.org/wiki/Poodle",
+    "description": ""
+  },
+  {
+    "name": "Porcelaine",
+    "url": "https://en.wikipedia.org/wiki/Porcelaine",
+    "description": ""
+  },
+  {
+    "name": "Portuguese Podengo",
+    "url": "https://en.wikipedia.org/wiki/Portuguese_Podengo",
+    "description": ""
+  },
+  {
+    "name": "Portuguese Pointer",
+    "url": "https://en.wikipedia.org/wiki/Portuguese_Pointer",
+    "description": ""
+  },
+  {
+    "name": "Portuguese Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Portuguese_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Portuguese Water Dog",
+    "url": "https://en.wikipedia.org/wiki/Portuguese_Water_Dog",
+    "description": ""
+  },
+  {
+    "name": "Posavac Hound",
+    "url": "https://en.wikipedia.org/wiki/Posavac_Hound",
+    "description": ""
+  },
+  {
+    "name": "Pražský Krysařík",
+    "url": "https://en.wikipedia.org/wiki/Pra%C5%BEsk%C3%BD_Krysa%C5%99%C3%ADk",
+    "description": ""
+  },
+  {
+    "name": "Presa Canario",
+    "url": "https://en.wikipedia.org/wiki/Presa_Canario",
+    "description": ""
+  },
+  {
+    "name": "Pudelpointer",
+    "url": "https://en.wikipedia.org/wiki/Pudelpointer",
+    "description": ""
+  },
+  {
+    "name": "Pug",
+    "url": "https://en.wikipedia.org/wiki/Pug",
+    "description": ""
+  },
+  {
+    "name": "Puli",
+    "url": "https://en.wikipedia.org/wiki/Puli_dog",
+    "description": ""
+  },
+  {
+    "name": "Pumi",
+    "url": "https://en.wikipedia.org/wiki/Pumi_dog",
+    "description": ""
+  },
+  {
+    "name": "Pungsan",
+    "url": "https://en.wikipedia.org/wiki/Pungsan_dog",
+    "description": ""
+  },
+  {
+    "name": "Pyrenean Mastiff",
+    "url": "https://en.wikipedia.org/wiki/Pyrenean_Mastiff",
+    "description": ""
+  },
+  {
+    "name": "Pyrenean Mountain Dog",
+    "url": "https://en.wikipedia.org/wiki/Pyrenean_Mountain_Dog",
+    "description": ""
+  },
+  {
+    "name": "Pyrenean Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Pyrenean_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Rafeiro do Alentejo",
+    "url": "https://en.wikipedia.org/wiki/Rafeiro_do_Alentejo",
+    "description": ""
+  },
+  {
+    "name": "Rajapalayam",
+    "url": "https://en.wikipedia.org/wiki/Rajapalayam_dog",
+    "description": ""
+  },
+  {
+    "name": "Rampur Greyhound",
+    "url": "https://en.wikipedia.org/wiki/Rampur_Greyhound",
+    "description": ""
+  },
+  {
+    "name": "Rastreador Brasileiro",
+    "url": "https://en.wikipedia.org/wiki/Rastreador_Brasileiro",
+    "description": ""
+  },
+  {
+    "name": "Rat Terrier",
+    "url": "https://en.wikipedia.org/wiki/Rat_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Ratonero Murciano",
+    "url": "https://en.wikipedia.org/wiki/Ratonero_Murciano",
+    "description": ""
+  },
+  {
+    "name": "Redbone Coonhound",
+    "url": "https://en.wikipedia.org/wiki/Redbone_Coonhound",
+    "description": ""
+  },
+  {
+    "name": "Rhodesian Ridgeback",
+    "url": "https://en.wikipedia.org/wiki/Rhodesian_Ridgeback",
+    "description": ""
+  },
+  {
+    "name": "Rize Koyun",
+    "url": "https://en.wikipedia.org/wiki/Rize_Koyun",
+    "description": ""
+  },
+  {
+    "name": "Romanian Mioritic Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/Romanian_Mioritic_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Romanian Raven Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/Romanian_Raven_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Rottweiler",
+    "url": "https://en.wikipedia.org/wiki/Rottweiler",
+    "description": ""
+  },
+  {
+    "name": "Rough Collie",
+    "url": "https://en.wikipedia.org/wiki/Rough_Collie",
+    "description": ""
+  },
+  {
+    "name": "Russian Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Russian_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Russkiy Toy",
+    "url": "https://en.wikipedia.org/wiki/Russkiy_Toy",
+    "description": ""
+  },
+  {
+    "name": "Russo-European Laika",
+    "url": "https://en.wikipedia.org/wiki/Russo-European_Laika",
+    "description": ""
+  },
+  {
+    "name": "Ryukyu",
+    "url": "https://en.wikipedia.org/wiki/Ryukyu_dog",
+    "description": ""
+  },
+  {
+    "name": "Saarloos Wolfdog",
+    "url": "https://en.wikipedia.org/wiki/Saarloos_Wolfdog",
+    "description": ""
+  },
+  {
+    "name": "Sabueso Español",
+    "url": "https://en.wikipedia.org/wiki/Sabueso_Espa%C3%B1ol",
+    "description": ""
+  },
+  {
+    "name": "Saint Miguel Cattle Dog",
+    "url": "https://en.wikipedia.org/wiki/Saint_Miguel_Cattle_Dog",
+    "description": ""
+  },
+  {
+    "name": "Saint-Usuge Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Saint-Usuge_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Sakhalin Husky",
+    "url": "https://en.wikipedia.org/wiki/Sakhalin_Husky",
+    "description": ""
+  },
+  {
+    "name": "Saluki",
+    "url": "https://en.wikipedia.org/wiki/Saluki",
+    "description": ""
+  },
+  {
+    "name": "Samoyed",
+    "url": "https://en.wikipedia.org/wiki/Samoyed_dog",
+    "description": ""
+  },
+  {
+    "name": "Sapsali",
+    "url": "https://en.wikipedia.org/wiki/Sapsali",
+    "description": ""
+  },
+  {
+    "name": "Sarabi",
+    "url": "https://en.wikipedia.org/wiki/Sarabi_dog",
+    "description": ""
+  },
+  {
+    "name": "Sarail Hound",
+    "url": "https://en.wikipedia.org/wiki/Sarail_Hound",
+    "description": ""
+  },
+  {
+    "name": "Sardinian Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/Sardinian_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Šarplaninac",
+    "url": "https://en.wikipedia.org/wiki/%C5%A0arplaninac",
+    "description": ""
+  },
+  {
+    "name": "Schapendoes",
+    "url": "https://en.wikipedia.org/wiki/Schapendoes",
+    "description": ""
+  },
+  {
+    "name": "Schillerstövare",
+    "url": "https://en.wikipedia.org/wiki/Schillerst%C3%B6vare",
+    "description": ""
+  },
+  {
+    "name": "Schipperke",
+    "url": "https://en.wikipedia.org/wiki/Schipperke",
+    "description": ""
+  },
+  {
+    "name": "Schnauzer",
+    "url": "https://en.wikipedia.org/wiki/Schnauzer",
+    "description": ""
+  },
+  {
+    "name": "Schweizer Laufhund",
+    "url": "https://en.wikipedia.org/wiki/Schweizer_Laufhund",
+    "description": ""
+  },
+  {
+    "name": "Schweizerischer Niederlaufhund",
+    "url": "https://en.wikipedia.org/wiki/Schweizerischer_Niederlaufhund",
+    "description": ""
+  },
+  {
+    "name": "Scottish Deerhound",
+    "url": "https://en.wikipedia.org/wiki/Scottish_Deerhound",
+    "description": ""
+  },
+  {
+    "name": "Scottish Terrier",
+    "url": "https://en.wikipedia.org/wiki/Scottish_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Sealyham Terrier",
+    "url": "https://en.wikipedia.org/wiki/Sealyham_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Segugio dell'Appennino",
+    "url": "https://en.wikipedia.org/wiki/Segugio_dell%27Appennino",
+    "description": ""
+  },
+  {
+    "name": "Segugio Italiano",
+    "url": "https://en.wikipedia.org/wiki/Segugio_Italiano",
+    "description": ""
+  },
+  {
+    "name": "Segugio Maremmano",
+    "url": "https://en.wikipedia.org/wiki/Segugio_Maremmano",
+    "description": ""
+  },
+  {
+    "name": "Serbian Hound",
+    "url": "https://en.wikipedia.org/wiki/Serbian_Hound",
+    "description": ""
+  },
+  {
+    "name": "Serbian Tricolour Hound",
+    "url": "https://en.wikipedia.org/wiki/Serbian_Tricolour_Hound",
+    "description": ""
+  },
+  {
+    "name": "Serrano Bulldog",
+    "url": "https://en.wikipedia.org/wiki/Serrano_Bulldog",
+    "description": ""
+  },
+  {
+    "name": "Shar Pei",
+    "url": "https://en.wikipedia.org/wiki/Shar_Pei",
+    "description": ""
+  },
+  {
+    "name": "Shetland Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Shetland_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Shiba Inu",
+    "url": "https://en.wikipedia.org/wiki/Shiba_Inu",
+    "description": ""
+  },
+  {
+    "name": "Shih Tzu",
+    "url": "https://en.wikipedia.org/wiki/Shih_Tzu",
+    "description": ""
+  },
+  {
+    "name": "Shikoku",
+    "url": "https://en.wikipedia.org/wiki/Shikoku_dog",
+    "description": ""
+  },
+  {
+    "name": "Shiloh Shepherd",
+    "url": "https://en.wikipedia.org/wiki/Shiloh_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Siberian Husky",
+    "url": "https://en.wikipedia.org/wiki/Siberian_Husky",
+    "description": ""
+  },
+  {
+    "name": "Silken Windhound",
+    "url": "https://en.wikipedia.org/wiki/Silken_Windhound",
+    "description": ""
+  },
+  {
+    "name": "Sinhala Hound",
+    "url": "https://en.wikipedia.org/wiki/Sinhala_Hound",
+    "description": ""
+  },
+  {
+    "name": "Skye Terrier",
+    "url": "https://en.wikipedia.org/wiki/Skye_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Sloughi",
+    "url": "https://en.wikipedia.org/wiki/Sloughi",
+    "description": ""
+  },
+  {
+    "name": "Slovak Rough-haired Pointer",
+    "url": "https://en.wikipedia.org/wiki/Slovak_Rough-haired_Pointer",
+    "description": ""
+  },
+  {
+    "name": "Slovak Cuvac",
+    "url": "https://en.wikipedia.org/wiki/Slovak_Cuvac",
+    "description": ""
+  },
+  {
+    "name": "Slovenský kopov",
+    "url": "https://en.wikipedia.org/wiki/Slovensk%C3%BD_kopov",
+    "description": ""
+  },
+  {
+    "name": "Smaland Hound",
+    "url": "https://en.wikipedia.org/wiki/Smaland_Hound",
+    "description": ""
+  },
+  {
+    "name": "Small Međimurje Dog",
+    "url": "https://en.wikipedia.org/wiki/Small_Me%C4%91imurje_Dog",
+    "description": ""
+  },
+  {
+    "name": "Small Münsterländer",
+    "url": "https://en.wikipedia.org/wiki/Small_M%C3%BCnsterl%C3%A4nder",
+    "description": ""
+  },
+  {
+    "name": "Smithfield",
+    "url": "https://en.wikipedia.org/wiki/Smithfield_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Smooth Collie",
+    "url": "https://en.wikipedia.org/wiki/Smooth_Collie",
+    "description": ""
+  },
+  {
+    "name": "Smooth Fox Terrier",
+    "url": "https://en.wikipedia.org/wiki/Smooth_Fox_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Soft-coated Wheaten Terrier",
+    "url": "https://en.wikipedia.org/wiki/Soft-coated_Wheaten_Terrier",
+    "description": ""
+  },
+  {
+    "name": "South Russian Ovcharka",
+    "url": "https://en.wikipedia.org/wiki/South_Russian_Ovcharka",
+    "description": ""
+  },
+  {
+    "name": "Spanish Mastiff",
+    "url": "https://en.wikipedia.org/wiki/Spanish_Mastiff",
+    "description": ""
+  },
+  {
+    "name": "Spanish Water Dog",
+    "url": "https://en.wikipedia.org/wiki/Spanish_Water_Dog",
+    "description": ""
+  },
+  {
+    "name": "Spino degli Iblei",
+    "url": "https://en.wikipedia.org/wiki/Spino_degli_Iblei",
+    "description": ""
+  },
+  {
+    "name": "Spinone Italiano",
+    "url": "https://en.wikipedia.org/wiki/Spinone_Italiano",
+    "description": ""
+  },
+  {
+    "name": "Sporting Lucas Terrier",
+    "url": "https://en.wikipedia.org/wiki/Sporting_Lucas_Terrier",
+    "description": ""
+  },
+  {
+    "name": "St. Bernard",
+    "url": "https://en.wikipedia.org/wiki/St._Bernard_(dog)",
+    "description": ""
+  },
+  {
+    "name": "St. Hubert Jura Hound",
+    "url": "https://en.wikipedia.org/wiki/St._Hubert_Jura_Hound",
+    "description": ""
+  },
+  {
+    "name": "Stabyhoun",
+    "url": "https://en.wikipedia.org/wiki/Stabyhoun",
+    "description": ""
+  },
+  {
+    "name": "Staffordshire Bull Terrier",
+    "url": "https://en.wikipedia.org/wiki/Staffordshire_Bull_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Standard Schnauzer",
+    "url": "https://en.wikipedia.org/wiki/Standard_Schnauzer",
+    "description": ""
+  },
+  {
+    "name": "Stephens Stock",
+    "url": "https://en.wikipedia.org/wiki/Stephens_Stock",
+    "description": ""
+  },
+  {
+    "name": "Styrian Coarse-haired Hound",
+    "url": "https://en.wikipedia.org/wiki/Styrian_Coarse-haired_Hound",
+    "description": ""
+  },
+  {
+    "name": "Sussex Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Sussex_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Swedish Lapphund",
+    "url": "https://en.wikipedia.org/wiki/Swedish_Lapphund",
+    "description": ""
+  },
+  {
+    "name": "Swedish Vallhund",
+    "url": "https://en.wikipedia.org/wiki/Swedish_Vallhund",
+    "description": ""
+  },
+  {
+    "name": "Taigan",
+    "url": "https://en.wikipedia.org/wiki/Taigan",
+    "description": ""
+  },
+  {
+    "name": "Taiwan Dog",
+    "url": "https://en.wikipedia.org/wiki/Taiwan_Dog",
+    "description": ""
+  },
+  {
+    "name": "Tamaskan Dog",
+    "url": "https://en.wikipedia.org/wiki/Tamaskan_Dog",
+    "description": ""
+  },
+  {
+    "name": "Tang Dog",
+    "url": "https://en.wikipedia.org/wiki/Tang_Dog",
+    "description": ""
+  },
+  {
+    "name": "Tarsus çatalburun",
+    "url": "https://en.wikipedia.org/wiki/Tarsus_%C3%A7atalburun",
+    "description": ""
+  },
+  {
+    "name": "Tatra Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/Tatra_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Teddy Roosevelt Terrier",
+    "url": "https://en.wikipedia.org/wiki/Teddy_Roosevelt_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Telomian",
+    "url": "https://en.wikipedia.org/wiki/Telomian",
+    "description": ""
+  },
+  {
+    "name": "Tenterfield Terrier",
+    "url": "https://en.wikipedia.org/wiki/Tenterfield_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Thai Bangkaew Dog",
+    "url": "https://en.wikipedia.org/wiki/Thai_Bangkaew_Dog",
+    "description": ""
+  },
+  {
+    "name": "Thai Ridgeback",
+    "url": "https://en.wikipedia.org/wiki/Thai_Ridgeback",
+    "description": ""
+  },
+  {
+    "name": "Tibetan Kyi Apso",
+    "url": "https://en.wikipedia.org/wiki/Tibetan_Kyi_Apso",
+    "description": ""
+  },
+  {
+    "name": "Tibetan Mastiff",
+    "url": "https://en.wikipedia.org/wiki/Tibetan_Mastiff",
+    "description": ""
+  },
+  {
+    "name": "Tibetan spaniel",
+    "url": "https://en.wikipedia.org/wiki/Tibetan_spaniel",
+    "description": ""
+  },
+  {
+    "name": "Tibetan Terrier",
+    "url": "https://en.wikipedia.org/wiki/Tibetan_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Tonya Finosu",
+    "url": "https://en.wikipedia.org/wiki/Tonya_Finosu",
+    "description": ""
+  },
+  {
+    "name": "Tornjak",
+    "url": "https://en.wikipedia.org/wiki/Tornjak",
+    "description": ""
+  },
+  {
+    "name": "Tosa",
+    "url": "https://en.wikipedia.org/wiki/Tosa_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Toy Fox Terrier",
+    "url": "https://en.wikipedia.org/wiki/Toy_Fox_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Toy Manchester Terrier",
+    "url": "https://en.wikipedia.org/wiki/Toy_Manchester_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Transylvanian Hound",
+    "url": "https://en.wikipedia.org/wiki/Transylvanian_Hound",
+    "description": ""
+  },
+  {
+    "name": "Treeing Cur",
+    "url": "https://en.wikipedia.org/wiki/Treeing_Cur",
+    "description": ""
+  },
+  {
+    "name": "Treeing Feist",
+    "url": "https://en.wikipedia.org/wiki/Treeing_Feist",
+    "description": ""
+  },
+  {
+    "name": "Treeing Tennessee Brindle",
+    "url": "https://en.wikipedia.org/wiki/Treeing_Tennessee_Brindle",
+    "description": ""
+  },
+  {
+    "name": "Treeing Walker Coonhound",
+    "url": "https://en.wikipedia.org/wiki/Treeing_Walker_Coonhound",
+    "description": ""
+  },
+  {
+    "name": "Trigg Hound",
+    "url": "https://en.wikipedia.org/wiki/Trigg_Hound",
+    "description": ""
+  },
+  {
+    "name": "Tyrolean Hound",
+    "url": "https://en.wikipedia.org/wiki/Tyrolean_Hound",
+    "description": ""
+  },
+  {
+    "name": "Valdueza",
+    "url": "https://en.wikipedia.org/wiki/Valdueza",
+    "description": ""
+  },
+  {
+    "name": "Valencian Terrier",
+    "url": "https://en.wikipedia.org/wiki/Valencian_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Vikhan",
+    "url": "https://en.wikipedia.org/wiki/Vikhan",
+    "description": ""
+  },
+  {
+    "name": "Villano de Las Encartaciones",
+    "url": "https://en.wikipedia.org/wiki/Villano_de_Las_Encartaciones",
+    "description": ""
+  },
+  {
+    "name": "Villanuco de Las Encartaciones",
+    "url": "https://en.wikipedia.org/wiki/Villanuco_de_Las_Encartaciones",
+    "description": ""
+  },
+  {
+    "name": "Vizsla",
+    "url": "https://en.wikipedia.org/wiki/Vizsla",
+    "description": ""
+  },
+  {
+    "name": "Volkosob",
+    "url": "https://en.wikipedia.org/wiki/Volkosob",
+    "description": ""
+  },
+  {
+    "name": "Volpino Italiano",
+    "url": "https://en.wikipedia.org/wiki/Volpino_Italiano",
+    "description": ""
+  },
+  {
+    "name": "Weimaraner",
+    "url": "https://en.wikipedia.org/wiki/Weimaraner",
+    "description": ""
+  },
+  {
+    "name": "Welsh Hound",
+    "url": "https://en.wikipedia.org/wiki/Welsh_Hound",
+    "description": ""
+  },
+  {
+    "name": "Welsh Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Welsh_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Welsh Springer Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Welsh_Springer_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Welsh Terrier",
+    "url": "https://en.wikipedia.org/wiki/Welsh_Terrier",
+    "description": ""
+  },
+  {
+    "name": "West Country Harrier",
+    "url": "https://en.wikipedia.org/wiki/West_Country_Harrier",
+    "description": ""
+  },
+  {
+    "name": "West Highland White Terrier",
+    "url": "https://en.wikipedia.org/wiki/West_Highland_White_Terrier",
+    "description": ""
+  },
+  {
+    "name": "West Siberian Laika",
+    "url": "https://en.wikipedia.org/wiki/West_Siberian_Laika",
+    "description": ""
+  },
+  {
+    "name": "Westphalian Dachsbracke",
+    "url": "https://en.wikipedia.org/wiki/Westphalian_Dachsbracke",
+    "description": ""
+  },
+  {
+    "name": "Wetterhoun",
+    "url": "https://en.wikipedia.org/wiki/Wetterhoun",
+    "description": ""
+  },
+  {
+    "name": "Whippet",
+    "url": "https://en.wikipedia.org/wiki/Whippet",
+    "description": ""
+  },
+  {
+    "name": "White Shepherd",
+    "url": "https://en.wikipedia.org/wiki/White_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "White Swiss Shepherd Dog",
+    "url": "https://en.wikipedia.org/wiki/White_Swiss_Shepherd_Dog",
+    "description": ""
+  },
+  {
+    "name": "Wire Fox Terrier",
+    "url": "https://en.wikipedia.org/wiki/Wire_Fox_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Wirehaired Pointing Griffon",
+    "url": "https://en.wikipedia.org/wiki/Wirehaired_Pointing_Griffon",
+    "description": ""
+  },
+  {
+    "name": "Wirehaired Vizsla",
+    "url": "https://en.wikipedia.org/wiki/Wirehaired_Vizsla",
+    "description": ""
+  },
+  {
+    "name": "Xiasi Dog",
+    "url": "https://en.wikipedia.org/wiki/Xiasi_Dog",
+    "description": ""
+  },
+  {
+    "name": "Xigou",
+    "url": "https://en.wikipedia.org/wiki/Xigou",
+    "description": ""
+  },
+  {
+    "name": "Xoloitzcuintle",
+    "url": "https://en.wikipedia.org/wiki/Xoloitzcuintle",
+    "description": ""
+  },
+  {
+    "name": "Yakutian Laika",
+    "url": "https://en.wikipedia.org/wiki/Yakutian_Laika",
+    "description": ""
+  },
+  {
+    "name": "Yorkshire Terrier",
+    "url": "https://en.wikipedia.org/wiki/Yorkshire_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Zerdava",
+    "url": "https://en.wikipedia.org/wiki/Zerdava",
+    "description": ""
+  },
+  {
+    "name": "Abyssinian sand terrier",
+    "url": "https://en.wikipedia.org/wiki/Abyssinian_sand_terrier",
+    "description": ""
+  },
+  {
+    "name": "Alaunt",
+    "url": "https://en.wikipedia.org/wiki/Alaunt",
+    "description": ""
+  },
+  {
+    "name": "Alpine Mastiff",
+    "url": "https://en.wikipedia.org/wiki/Alpine_Mastiff",
+    "description": ""
+  },
+  {
+    "name": "Argentine Polar Dog",
+    "url": "https://en.wikipedia.org/wiki/Argentine_polar_dog",
+    "description": ""
+  },
+  {
+    "name": "Assyrian Mastiff",
+    "url": "https://en.wikipedia.org/wiki/Assyrian_Mastiff",
+    "description": ""
+  },
+  {
+    "name": "Belgian Mastiff",
+    "url": "https://en.wikipedia.org/wiki/Belgian_Mastiff",
+    "description": ""
+  },
+  {
+    "name": "Black and Tan Terrier",
+    "url": "https://en.wikipedia.org/wiki/Black_and_Tan_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Braque Dupuy",
+    "url": "https://en.wikipedia.org/wiki/Braque_Dupuy",
+    "description": ""
+  },
+  {
+    "name": "Buckhound",
+    "url": "https://en.wikipedia.org/wiki/Buckhound",
+    "description": ""
+  },
+  {
+    "name": "Bullenbeisser",
+    "url": "https://en.wikipedia.org/wiki/Bullenbeisser",
+    "description": ""
+  },
+  {
+    "name": "Chien-gris",
+    "url": "https://en.wikipedia.org/wiki/Chien-gris",
+    "description": ""
+  },
+  {
+    "name": "Chiribaya Dog",
+    "url": "https://en.wikipedia.org/wiki/Chiribaya_Dog",
+    "description": ""
+  },
+  {
+    "name": "Córdoba fighting dog",
+    "url": "https://en.wikipedia.org/wiki/C%C3%B3rdoba_fighting_dog",
+    "description": ""
+  },
+  {
+    "name": "Cumberland Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Cumberland_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Cur",
+    "url": "https://en.wikipedia.org/wiki/Cur",
+    "description": ""
+  },
+  {
+    "name": "Dalbo",
+    "url": "https://en.wikipedia.org/wiki/Dalbo_dog",
+    "description": ""
+  },
+  {
+    "name": "Dogo Cubano",
+    "url": "https://en.wikipedia.org/wiki/Dogo_Cubano",
+    "description": ""
+  },
+  {
+    "name": "Dumfriesshire hound",
+    "url": "https://en.wikipedia.org/wiki/Dumfriesshire_hound",
+    "description": ""
+  },
+  {
+    "name": "English Water Spaniel",
+    "url": "https://en.wikipedia.org/wiki/English_Water_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "English White Terrier",
+    "url": "https://en.wikipedia.org/wiki/English_White_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Fu Quan",
+    "url": "https://en.wikipedia.org/wiki/Fu_Quan",
+    "description": ""
+  },
+  {
+    "name": "Fuegian",
+    "url": "https://en.wikipedia.org/wiki/Fuegian_dog",
+    "description": ""
+  },
+  {
+    "name": "Grand Fauve de Bretagne",
+    "url": "https://en.wikipedia.org/wiki/Grand_Fauve_de_Bretagne",
+    "description": ""
+  },
+  {
+    "name": "Halls Heeler",
+    "url": "https://en.wikipedia.org/wiki/Halls_Heeler",
+    "description": ""
+  },
+  {
+    "name": "Hare Indian Dog",
+    "url": "https://en.wikipedia.org/wiki/Hare_Indian_Dog",
+    "description": ""
+  },
+  {
+    "name": "Hawaiian Poi Dog",
+    "url": "https://en.wikipedia.org/wiki/Hawaiian_Poi_Dog",
+    "description": ""
+  },
+  {
+    "name": "King's White Hound",
+    "url": "https://en.wikipedia.org/wiki/King%27s_White_Hound",
+    "description": ""
+  },
+  {
+    "name": "Kurī",
+    "url": "https://en.wikipedia.org/wiki/Kur%C4%AB",
+    "description": ""
+  },
+  {
+    "name": "Laconian",
+    "url": "https://en.wikipedia.org/wiki/Laconian_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Lapponian Shepherd",
+    "url": "https://en.wikipedia.org/wiki/Lapponian_Shepherd",
+    "description": ""
+  },
+  {
+    "name": "Limer",
+    "url": "https://en.wikipedia.org/wiki/Limer",
+    "description": ""
+  },
+  {
+    "name": "Marquesan Dog",
+    "url": "https://en.wikipedia.org/wiki/Marquesan_Dog",
+    "description": ""
+  },
+  {
+    "name": "Molossus",
+    "url": "https://en.wikipedia.org/wiki/Molossus_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Moscow Water Dog",
+    "url": "https://en.wikipedia.org/wiki/Moscow_Water_Dog",
+    "description": ""
+  },
+  {
+    "name": "Norfolk Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Norfolk_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Norman Hound",
+    "url": "https://en.wikipedia.org/wiki/Norman_Hound",
+    "description": ""
+  },
+  {
+    "name": "North Country Beagle",
+    "url": "https://en.wikipedia.org/wiki/North_Country_Beagle",
+    "description": ""
+  },
+  {
+    "name": "Old Croatian Sighthound",
+    "url": "https://en.wikipedia.org/wiki/Old_Croatian_Sighthound",
+    "description": ""
+  },
+  {
+    "name": "Old English Bulldog",
+    "url": "https://en.wikipedia.org/wiki/Old_English_Bulldog",
+    "description": ""
+  },
+  {
+    "name": "Old Spanish Pointer",
+    "url": "https://en.wikipedia.org/wiki/Old_Spanish_Pointer",
+    "description": ""
+  },
+  {
+    "name": "Old Welsh Grey Sheepdog",
+    "url": "https://en.wikipedia.org/wiki/Old_Welsh_Grey_Sheepdog",
+    "description": ""
+  },
+  {
+    "name": "Paisley Terrier",
+    "url": "https://en.wikipedia.org/wiki/Paisley_Terrier",
+    "description": ""
+  },
+  {
+    "name": "Polynesian Dog",
+    "url": "https://en.wikipedia.org/wiki/Polynesian_Dog",
+    "description": ""
+  },
+  {
+    "name": "Rache",
+    "url": "https://en.wikipedia.org/wiki/Rache",
+    "description": ""
+  },
+  {
+    "name": "Salish Wool Dog",
+    "url": "https://en.wikipedia.org/wiki/Salish_Wool_Dog",
+    "description": ""
+  },
+  {
+    "name": "Sleuth hound",
+    "url": "https://en.wikipedia.org/wiki/Sleuth_hound",
+    "description": ""
+  },
+  {
+    "name": "Southern Hound",
+    "url": "https://en.wikipedia.org/wiki/Southern_Hound",
+    "description": ""
+  },
+  {
+    "name": "St. John's water dog",
+    "url": "https://en.wikipedia.org/wiki/St._John%27s_water_dog",
+    "description": ""
+  },
+  {
+    "name": "Staghound",
+    "url": "https://en.wikipedia.org/wiki/Staghound",
+    "description": ""
+  },
+  {
+    "name": "Tahitian Dog",
+    "url": "https://en.wikipedia.org/wiki/Tahitian_Dog",
+    "description": ""
+  },
+  {
+    "name": "Tahltan Bear Dog",
+    "url": "https://en.wikipedia.org/wiki/Tahltan_Bear_Dog",
+    "description": ""
+  },
+  {
+    "name": "Talbot",
+    "url": "https://en.wikipedia.org/wiki/Talbot_(dog)",
+    "description": ""
+  },
+  {
+    "name": "Techichi",
+    "url": "https://en.wikipedia.org/wiki/Techichi",
+    "description": ""
+  },
+  {
+    "name": "Terceira Mastiff",
+    "url": "https://en.wikipedia.org/wiki/Terceira_Mastiff",
+    "description": ""
+  },
+  {
+    "name": "Tesem",
+    "url": "https://en.wikipedia.org/wiki/Tesem",
+    "description": ""
+  },
+  {
+    "name": "Toy Bulldog",
+    "url": "https://en.wikipedia.org/wiki/Toy_Bulldog",
+    "description": ""
+  },
+  {
+    "name": "Toy Trawler Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Toy_Trawler_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Turnspit",
+    "url": "https://en.wikipedia.org/wiki/Turnspit_dog",
+    "description": ""
+  },
+  {
+    "name": "Tweed Water Spaniel",
+    "url": "https://en.wikipedia.org/wiki/Tweed_Water_Spaniel",
+    "description": ""
+  },
+  {
+    "name": "Welsh Hillman",
+    "url": "https://en.wikipedia.org/wiki/Welsh_Hillman",
+    "description": ""
+  }
+]
