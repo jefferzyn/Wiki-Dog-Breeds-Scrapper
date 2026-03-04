@@ -3,6 +3,7 @@ Web scraper for Wikipedia dog breeds list.
 Extracts dog breed names and links to their Wikipedia pages.
 """
 
+import os
 import re
 import requests
 from bs4 import BeautifulSoup
@@ -98,6 +99,26 @@ class DogBreedScraper:
         print(f"Found {len(breeds)} dog breeds")
         return breeds
 
+    def save_urls_to_folder(self, breeds: List[Dict[str, str]], folder_path: str = "data/urls") -> None:
+        """
+        Save URLs for each dog breed to individual files in a folder.
+        
+        Args:
+            breeds: List of breed dictionaries with 'name' and 'url' keys
+            folder_path: Path to the folder where URL files will be saved
+        """
+        os.makedirs(folder_path, exist_ok=True)
+        
+        for breed in breeds:
+            # Create a safe filename from the breed name
+            safe_name = re.sub(r'[<>:"/\\|?*]', '_', breed["name"])
+            file_path = os.path.join(folder_path, f"{safe_name}.txt")
+            
+            with open(file_path, "w", encoding="utf-8") as f:
+                f.write(breed["url"])
+        
+        print(f"Saved {len(breeds)} URL files to '{folder_path}/'")
+
 
 def scrape_dog_breeds(fetch_descriptions: bool = False) -> List[Dict[str, str]]:
     """Convenience function to scrape dog breeds."""
@@ -105,8 +126,25 @@ def scrape_dog_breeds(fetch_descriptions: bool = False) -> List[Dict[str, str]]:
     return scraper.scrape(fetch_descriptions=fetch_descriptions)
 
 
+def save_breed_urls(breeds: List[Dict[str, str]] = None, folder_path: str = "data/urls") -> None:
+    """
+    Save URLs for each dog breed to individual files in a folder.
+    
+    Args:
+        breeds: List of breed dictionaries. If None, will scrape fresh data.
+        folder_path: Path to the folder where URL files will be saved
+    """
+    scraper = DogBreedScraper()
+    if breeds is None:
+        breeds = scraper.scrape()
+    scraper.save_urls_to_folder(breeds, folder_path)
+
+
 if __name__ == "__main__":
     breeds = scrape_dog_breeds()
     print(f"\nFirst 10 breeds:")
     for breed in breeds[:10]:
         print(f"  - {breed['name']}")
+    
+    # Save URLs to folder
+    save_breed_urls(breeds)
