@@ -42,12 +42,12 @@ class DogBreedPipeline:
         self.pipeline.add_component("retriever", self.retriever)
 
     def search(self, query: str, top_k: int = 5) -> list:
-
+        """Search for dog breeds matching the query."""
         if not self.pipeline:
             raise RuntimeError("Pipeline not built. Call build_pipeline() first.")
 
-        results = self.retriever.run(query=query, top_k=top_k)
-        return results.get("documents", [])
+        results = self.pipeline.run({"retriever": {"query": query, "top_k": top_k}})
+        return results.get("retriever", {}).get("documents", [])
 
     def initialize(self, fetch_descriptions: bool = False):
         """Initialize pipeline with data."""
