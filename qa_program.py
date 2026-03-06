@@ -25,7 +25,7 @@ import argparse
 import requests
 import time
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Tuple
 from dataclasses import dataclass
 
 from haystack import Document, Pipeline, component
@@ -149,7 +149,7 @@ class DogBreedQA:
         if use_hf and not self.use_hf:
             print("Warning: HuggingFace requested but not available. Set HF_TOKEN env var.")
 
-    def load_urls(self) -> List[str]:
+    def load_urls(self) -> List[Tuple[str, str]]:
         """Load all URLs from txt files in the urls directory."""
         urls = []
         url_files = glob.glob(os.path.join(self.urls_dir, "*.txt"))
