@@ -99,24 +99,24 @@ class WikipediaFetcher:
         return {"streams": streams}
 
 # Questions for dog breed recommendation
-QUESTIONNAIRE = [
-    "1. What is your experience level with dogs? (beginner/intermediate/experienced)",
-    "2. What type of home do you live in? (apartment/house with yard/rural property)",
-    "3. How active is your lifestyle? (sedentary/moderate/very active)",
-    "4. How many hours per day will the dog be left alone? (0-2/2-4/4-6/6+)",
-    "5. Do you have children, and if so, what ages? (no children/toddlers/school-age/teenagers)",
-    "6. Do you have other pets at home? (no/cats/dogs/other)",
-    "7. How much time can you dedicate to daily exercise? (15-30min/30-60min/60+ min)",
-    "8. How much time are you willing to spend on grooming? (minimal/moderate/extensive)",
-    "9. Do you prefer a dog that is more independent or more affectionate/clingy? (independent/balanced/affectionate)",
-    "10. Do you want a dog that is highly trainable and eager to please? (yes/no/doesn't matter)",
-    "11. What size dog do you prefer? (small/medium/large/giant/no preference)",
-    "12. Do you prefer a quiet dog or one that barks/vocalizes more? (quiet/moderate/vocal)",
-    "13. What is the primary reason you want a dog? (companionship/protection/exercise partner/family pet/working)",
-    "14. What climate do you live in? (hot/cold/temperate/varies)",
-    "15. Do you prefer a puppy, young adult, adult, or senior dog? (puppy/young adult/adult/senior/no preference)",
-    "16. Does anyone in your household have pet allergies? (yes/no)",
-]
+#QUESTIONNAIRE = [
+   # "1. What is your experience level with dogs? (beginner/intermediate/experienced)",
+   # "2. What type of home do you live in? (apartment/house with yard/rural property)",
+   # "3. How active is your lifestyle? (sedentary/moderate/very active)",
+   # "4. How many hours per day will the dog be left alone? (0-2/2-4/4-6/6+)",
+   # "5. Do you have children, and if so, what ages? (no children/toddlers/school-age/teenagers)",
+   # "6. Do you have other pets at home? (no/cats/dogs/other)",
+   # "7. How much time can you dedicate to daily exercise? (15-30min/30-60min/60+ min)",
+   # "8. How much time are you willing to spend on grooming? (minimal/moderate/extensive)",
+   # "9. Do you prefer a dog that is more independent or more affectionate/clingy? (independent/balanced/affectionate)",
+   # "10. Do you want a dog that is highly trainable and eager to please? (yes/no/doesn't matter)",
+   # "11. What size dog do you prefer? (small/medium/large/giant/no preference)",
+   # "12. Do you prefer a quiet dog or one that barks/vocalizes more? (quiet/moderate/vocal)",
+   # "13. What is the primary reason you want a dog? (companionship/protection/exercise partner/family pet/working)",
+   # "14. What climate do you live in? (hot/cold/temperate/varies)",
+   # "15. Do you prefer a puppy, young adult, adult, or senior dog? (puppy/young adult/adult/senior/no preference)",
+   # "16. Does anyone in your household have pet allergies? (yes/no)",
+#]
 
 
 class DogBreedQA:
