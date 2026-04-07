@@ -1,0 +1,53 @@
+# Dog Breed Questions - Batch Processing
+# Use with batch_qa_processor.py to run all questions through the QA system
+
+1. What are the main characteristics of a Labrador Retriever?
+2. Which dog breeds are considered hypoallergenic?
+3. What is the average lifespan of a German Shepherd?
+4. Which breeds are best for apartment living?
+5. What are the grooming needs of a Poodle?
+6. Which dog breeds are known for being family-friendly?
+7. What is the origin of the Bulldog breed?
+8. Which breeds require the most exercise?
+9. What size category is a Beagle?
+10. Which breeds are good guard dogs?
+11. What is the temperament of a Golden Retriever?
+12. Which breeds are easiest to train?
+13. What health issues are common in Dachshunds?
+14. Which breeds are suitable for first-time owners?
+15. What is the coat type of a Siberian Husky?
+16. Which breeds are known for being aggressive?
+17. What is the weight range of a Rottweiler?
+18. Which breeds are best for cold climates?
+19. What is the history of the Border Collie?
+20. Which breeds shed the least?
+21. What is the typical height of a Great Dane?
+22. Which breeds are known for high intelligence?
+23. What are the exercise needs of a Boxer?
+24. Which breeds are good with children?
+25. What is the origin country of the Shiba Inu?
+26. Which breeds require minimal grooming?
+27. What is the temperament of a Chihuahua?
+28. Which breeds are best for active owners?
+29. What is the average lifespan of a French Bulldog?
+30. Which breeds are prone to separation anxiety?
+31. What is the coat color variety of a Cocker Spaniel?
+32. Which breeds are best for hunting?
+33. What is the energy level of a Jack Russell Terrier?
+34. Which breeds are suitable for hot climates?
+35. What is the temperament of a Doberman Pinscher?
+36. Which breeds are known for loyalty?
+37. What are common health issues in Bulldogs?
+38. Which breeds are best for small homes?
+39. What is the grooming requirement of a Maltese?
+40. Which breeds are considered toy breeds?
+41. What is the origin of the Australian Shepherd?
+42. Which breeds are good for elderly owners?
+43. What is the bark tendency of a Miniature Schnauzer?
+44. Which breeds are best for security purposes?
+45. What is the adaptability level of a Pug?
+46. Which breeds are known for being quiet?
+47. What is the intelligence ranking of a Border Collie?
+48. Which breeds are best for families with other pets?
+49. What is the typical diet requirement of large dog breeds?
+50. Which breeds are most popular worldwide?

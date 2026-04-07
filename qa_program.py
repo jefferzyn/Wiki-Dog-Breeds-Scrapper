@@ -24,8 +24,9 @@ import glob
 import argparse
 import requests
 import time
+import random
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Dict, Any
 from dataclasses import dataclass
 
 from haystack import Document, Pipeline, component
@@ -38,13 +39,15 @@ from haystack.components.embedders import (
     SentenceTransformersTextEmbedder,
 )
 from haystack.components.retrievers.in_memory import InMemoryEmbeddingRetriever
-from haystack.components.builders import PromptBuilder
+from haystack.components.builders import AnswerBuilder, ChatPromptBuilder
+from haystack.dataclasses import ChatMessage, ByteStream
 from haystack.document_stores.in_memory import InMemoryDocumentStore
-from haystack.dataclasses import ByteStream
+from haystack.document_stores.types import DuplicatePolicy
+from haystack.evaluation.eval_run_result import EvaluationRunResult
 
 # Optional OpenAI integration
 try:
-    from haystack.components.generators import OpenAIGenerator
+    from haystack.components.generators.chat import OpenAIChatGenerator
     HAS_OPENAI = True
 except ImportError:
     HAS_OPENAI = False
@@ -55,6 +58,17 @@ try:
     HAS_HF = True
 except ImportError:
     HAS_HF = False
+
+# Evaluation components
+try:
+    from haystack.components.evaluators import (
+        DocumentMRREvaluator,
+        FaithfulnessEvaluator,
+        SASEvaluator,
+    )
+    HAS_EVALUATORS = True
+except ImportError:
+    HAS_EVALUATORS = False
 
 
 @component
@@ -125,7 +139,8 @@ class DogBreedQA:
     def __init__(self, urls_dir: str = "data/urls", 
                  embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2",
                  use_openai: bool = False,
-                 use_hf: bool = False):
+                 use_hf: bool = False,
+                 output_dir: str = "data/qa_outputs"):
         """
         Initialize the QA system.
         
@@ -134,20 +149,84 @@ class DogBreedQA:
             embedding_model: Sentence transformer model for embeddings
             use_openai: Whether to use OpenAI for answer generation
             use_hf: Whether to use HuggingFace API for answer generation
+            output_dir: Directory to save Q&A outputs
         """
         self.urls_dir = urls_dir
         self.embedding_model = embedding_model
         self.use_openai = use_openai and HAS_OPENAI and os.getenv("OPENAI_API_KEY")
         self.use_hf = use_hf and HAS_HF and os.getenv("HF_TOKEN")
         self.document_store = InMemoryDocumentStore()
-        self.indexing_pipeline = None
+        self.indexing_pipeline = self._build_indexing_pipeline()  # Built once during init
         self.rag_pipeline = None
         self.is_indexed = False
+        
+        # Setup output directory for Q&A logging
+        self.output_dir = output_dir
+        os.makedirs(self.output_dir, exist_ok=True)
+        
+        # Create timestamped log file
+        from datetime import datetime
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.qa_log_file = os.path.join(self.output_dir, f"qa_log_{timestamp}.txt")
+        
+        # Initialize log file with header
+        self._initialize_log_file()
         
         if use_openai and not self.use_openai:
             print("Warning: OpenAI requested but not available. Set OPENAI_API_KEY env var.")
         if use_hf and not self.use_hf:
             print("Warning: HuggingFace requested but not available. Set HF_TOKEN env var.")
+
+    def _initialize_log_file(self):
+        """Initialize the Q&A log file with header information."""
+        from datetime import datetime
+        header = f"""================================================================================
+DOG BREED QA SYSTEM - Question & Answer Log
+================================================================================
+Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+Embedding Model: {self.embedding_model}
+OpenAI Enabled: {self.use_openai}
+HuggingFace Enabled: {self.use_hf}
+================================================================================
+
+"""
+        with open(self.qa_log_file, 'w', encoding='utf-8') as f:
+            f.write(header)
+
+    def save_qa_pair(self, question: str, answer: str, session_type: str = "Interactive"):
+        """
+        Save a question-answer pair to the log file.
+        
+        Args:
+            question: The user's question
+            answer: The system's answer
+            session_type: Type of session (Interactive, Questionnaire, Search, etc.)
+        """
+        from datetime import datetime
+        
+        # Format the Q&A entry
+        entry = f"""[{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}] {session_type}
+{'─' * 80}
+QUESTION:
+{question}
+
+ANSWER:
+{answer}
+
+{'=' * 80}
+
+"""
+        
+        # Append to log file
+        try:
+            with open(self.qa_log_file, 'a', encoding='utf-8') as f:
+                f.write(entry)
+        except Exception as e:
+            print(f"Warning: Could not save Q&A pair to log: {e}")
+
+    def get_log_file_path(self) -> str:
+        """Get the path to the current Q&A log file."""
+        return self.qa_log_file
 
     def load_urls(self) -> List[Tuple[str, str]]:
         """Load all URLs from txt files in the urls directory."""
@@ -169,45 +248,57 @@ class DogBreedQA:
         print(f"Loaded {len(urls)} URLs")
         return urls
 
-    def build_indexing_pipeline(self) -> Pipeline:
-        """Build the indexing pipeline for fetching and processing documents."""
-        pipeline = Pipeline()
+    def _build_indexing_pipeline(self) -> Pipeline:
+        """Build the indexing pipeline for fetching and processing documents.
+        
+        Following Haystack tutorial pattern for RAG pipeline evaluation.
+        Built once during initialization to avoid redundant rebuilding.
+        """
+        indexing = Pipeline()
         
         # Add components - use custom fetcher with proper User-Agent for Wikipedia
-        pipeline.add_component("fetcher", WikipediaFetcher(
+        indexing.add_component("fetcher", WikipediaFetcher(
             timeout=30,
             delay=0.3  # Be polite to Wikipedia
         ))
-        pipeline.add_component("converter", HTMLToDocument())
-        pipeline.add_component("cleaner", DocumentCleaner(
+        indexing.add_component("converter", HTMLToDocument())
+        indexing.add_component("cleaner", DocumentCleaner(
             remove_empty_lines=True,
             remove_extra_whitespaces=True,
         ))
-        pipeline.add_component("splitter", DocumentSplitter(
+        indexing.add_component("splitter", DocumentSplitter(
             split_by="word",
             split_length=200,
             split_overlap=50
         ))
-        pipeline.add_component("embedder", SentenceTransformersDocumentEmbedder(
+        indexing.add_component("embedder", SentenceTransformersDocumentEmbedder(
             model=self.embedding_model
         ))
-        pipeline.add_component("writer", DocumentWriter(
-            document_store=self.document_store
+        indexing.add_component("writer", DocumentWriter(
+            document_store=self.document_store,
+            policy=DuplicatePolicy.SKIP
         ))
         
         # Connect components
-        pipeline.connect("fetcher.streams", "converter.sources")
-        pipeline.connect("converter", "cleaner")
-        pipeline.connect("cleaner", "splitter")
-        pipeline.connect("splitter", "embedder")
-        pipeline.connect("embedder", "writer")
+        indexing.connect("fetcher.streams", "converter.sources")
+        indexing.connect("converter", "cleaner")
+        indexing.connect("cleaner", "splitter")
+        indexing.connect("splitter", "embedder")
+        indexing.connect("embedder", "writer")
         
-        return pipeline
+        return indexing
 
     def build_rag_pipeline(self) -> Pipeline:
-        """Build the RAG pipeline for question answering."""
+        """Build the RAG pipeline for question answering.
         
-        prompt_template = """You are an expert dog breed advisor helping users find the perfect dog breed.
+        Following Haystack tutorial pattern with ChatPromptBuilder and Generator (if available).
+        Properly connects generator to answer builder.
+        """
+        
+        # Create chat prompt template following tutorial pattern
+        template = [
+            ChatMessage.from_user(
+                """You are an expert dog breed advisor helping users find the perfect dog breed.
 
 Based on the following Wikipedia information about various dog breeds, answer the user's question.
 
@@ -217,7 +308,7 @@ Context:
 ---
 {% endfor %}
 
-User's Question: {{ question }}
+Question: {{ question }}
 
 Instructions:
 - Provide specific breed recommendations when appropriate
@@ -226,42 +317,67 @@ Instructions:
 - Format your response clearly with breed names highlighted
 
 Answer:"""
+            )
+        ]
         
-        pipeline = Pipeline()
+        rag_pipeline = Pipeline()
         
-        # Add components
-        pipeline.add_component("text_embedder", SentenceTransformersTextEmbedder(
-            model=self.embedding_model
-        ))
-        pipeline.add_component("retriever", InMemoryEmbeddingRetriever(
-            document_store=self.document_store,
-            top_k=10
-        ))
-        pipeline.add_component("prompt_builder", PromptBuilder(
-            template=prompt_template,
-            required_variables=["documents", "question"]
-        ))
+        # Add retrieval components
+        rag_pipeline.add_component(
+            "query_embedder", 
+            SentenceTransformersTextEmbedder(model=self.embedding_model)
+        )
+        rag_pipeline.add_component(
+            "retriever", 
+            InMemoryEmbeddingRetriever(document_store=self.document_store, top_k=10)
+        )
+        rag_pipeline.add_component(
+            "prompt_builder", 
+            ChatPromptBuilder(template=template, required_variables=["documents", "question"])
+        )
         
-        # Add LLM generator if available
+        # Connect retrieval components
+        rag_pipeline.connect("query_embedder", "retriever.query_embedding")
+        rag_pipeline.connect("retriever", "prompt_builder.documents")
+        
+        # Add and connect generator if available
         if self.use_openai:
-            pipeline.add_component("generator", OpenAIGenerator(
-                model="gpt-3.5-turbo",
-                generation_kwargs={"max_tokens": 1000, "temperature": 0.7}
-            ))
-            pipeline.connect("prompt_builder", "generator")
+            from haystack.components.generators.chat import OpenAIChatGenerator
+            rag_pipeline.add_component(
+                "generator", 
+                OpenAIChatGenerator(
+                    model="gpt-4o-mini",
+                    generation_kwargs={"max_tokens": 1000, "temperature": 0.7}
+                )
+            )
+            rag_pipeline.add_component("answer_builder", AnswerBuilder())
+            
+            # Connect generator to answer builder
+            rag_pipeline.connect("prompt_builder.prompt", "generator.messages")
+            rag_pipeline.connect("generator.replies", "answer_builder.replies")
+            rag_pipeline.connect("retriever", "answer_builder.documents")
+            
         elif self.use_hf:
-            pipeline.add_component("generator", HuggingFaceAPIGenerator(
-                api_type="serverless_inference_api",
-                api_params={"model": "mistralai/Mistral-7B-Instruct-v0.2"},
-                generation_kwargs={"max_new_tokens": 500, "temperature": 0.7}
-            ))
-            pipeline.connect("prompt_builder", "generator")
+            rag_pipeline.add_component(
+                "generator",
+                HuggingFaceAPIGenerator(
+                    api_type="serverless_inference_api",
+                    api_params={"model": "mistralai/Mistral-7B-Instruct-v0.2"},
+                    generation_kwargs={"max_new_tokens": 500, "temperature": 0.7}
+                )
+            )
+            rag_pipeline.add_component("answer_builder", AnswerBuilder())
+            
+            # Connect generator to answer builder
+            rag_pipeline.connect("prompt_builder.prompt", "generator.prompt")
+            rag_pipeline.connect("generator.replies", "answer_builder.replies")
+            rag_pipeline.connect("retriever", "answer_builder.documents")
+        else:
+            # No generator: just use retrieved documents as context
+            rag_pipeline.add_component("answer_builder", AnswerBuilder())
+            rag_pipeline.connect("retriever", "answer_builder.documents")
         
-        # Connect components
-        pipeline.connect("text_embedder.embedding", "retriever.query_embedding")
-        pipeline.connect("retriever", "prompt_builder.documents")
-        
-        return pipeline
+        return rag_pipeline
 
     def index_documents(self, url_data: Optional[List[tuple]] = None, batch_size: int = 5):
         """
@@ -279,9 +395,6 @@ Answer:"""
             return
         
         urls = [item[0] if isinstance(item, tuple) else item for item in url_data]
-        
-        print(f"Building indexing pipeline...")
-        self.indexing_pipeline = self.build_indexing_pipeline()
         
         total_batches = (len(urls) + batch_size - 1) // batch_size
         print(f"Indexing {len(urls)} URLs in {total_batches} batches...")
@@ -319,11 +432,13 @@ Answer:"""
         """
         Ask a question and get an answer.
         
+        Following tutorial pattern - run with all required components.
+        
         Args:
             question: User's question about dog breeds
             
         Returns:
-            Dictionary with retrieved documents and generated answer/prompt
+            Dictionary with retrieved documents and generated answer
         """
         if not self.is_indexed:
             raise RuntimeError("Documents not indexed. Call initialize() first.")
@@ -331,11 +446,19 @@ Answer:"""
         if self.rag_pipeline is None:
             self.rag_pipeline = self.build_rag_pipeline()
         
-        # Run the RAG pipeline
-        result = self.rag_pipeline.run({
-            "text_embedder": {"text": question},
-            "prompt_builder": {"question": question}
-        })
+        # Build inputs based on what's in the pipeline
+        run_inputs = {
+            "query_embedder": {"text": question},
+            "prompt_builder": {"question": question},
+            "answer_builder": {"query": question},
+        }
+        
+        # Only include generator input if generator is in use
+        if self.use_openai or self.use_hf:
+            run_inputs["generator"] = {}  # Uses piped-in messages from prompt_builder
+        
+        # Run the RAG pipeline with required inputs
+        result = self.rag_pipeline.run(run_inputs)
         
         return result
 
@@ -351,15 +474,18 @@ Answer:"""
         """
         result = self.ask(question)
         
-        if (self.use_openai or self.use_hf) and "generator" in result:
-            # Return LLM-generated answer
-            replies = result.get("generator", {}).get("replies", [])
-            if replies:
-                return replies[0]
+        # Extract answer from answer_builder following tutorial pattern
+        if "answer_builder" in result and "answers" in result["answer_builder"]:
+            answers = result["answer_builder"]["answers"]
+            if answers:
+                return answers[0].data
         
-        # Return the prompt (context) for manual review
-        prompt = result.get("prompt_builder", {}).get("prompt", "")
-        return f"[Retrieved Context - No LLM configured]\n\n{prompt}"
+        # Fallback: return the prompt (context) for manual review
+        if "prompt_builder" in result:
+            prompt = result["prompt_builder"].get("prompt", "")
+            return f"[Retrieved Context - No LLM configured]\n\n{prompt}"
+        
+        return "No answer could be generated."
 
     def interactive_questionnaire(self) -> str:
         """Run the interactive questionnaire and return compiled preferences."""
@@ -370,8 +496,61 @@ Answer:"""
         print("the perfect dog breed for your lifestyle.\n")
         print("(Press Enter to skip any question)\n")
         
+        questionnaire = [
+            "1. What are the main characteristics of a Labrador Retriever?",
+            "2. Which dog breeds are considered hypoallergenic?",
+            "3. What is the average lifespan of a German Shepherd?",
+            "4. Which breeds are best for apartment living?",
+            "5. What are the grooming needs of a Poodle?",
+            "6. Which dog breeds are known for being family-friendly?",
+            "7. What is the origin of the Bulldog breed?",
+            "8. Which breeds require the most exercise?",
+            "9. What size category is a Beagle?",
+            "10. Which breeds are good guard dogs?",
+            "11. What is the temperament of a Golden Retriever?",
+            "12. Which breeds are easiest to train?",
+            "13. What health issues are common in Dachshunds?",
+            "14. Which breeds are suitable for first-time owners?",
+            "15. What is the coat type of a Siberian Husky?",
+            "16. Which breeds are known for being aggressive?",
+            "17. What is the weight range of a Rottweiler?",
+            "18. Which breeds are best for cold climates?",
+            "19. What is the history of the Border Collie?",
+            "20. Which breeds shed the least?",
+            "21. What is the typical height of a Great Dane?",
+            "22. Which breeds are known for high intelligence?",
+            "23. What are the exercise needs of a Boxer?",
+            "24. Which breeds are good with children?",
+            "25. What is the origin country of the Shiba Inu?",
+            "26. Which breeds require minimal grooming?",
+            "27. What is the temperament of a Chihuahua?",
+            "28. Which breeds are best for active owners?",
+            "29. What is the average lifespan of a French Bulldog?",
+            "30. Which breeds are prone to separation anxiety?",
+            "31. What is the coat color variety of a Cocker Spaniel?",
+            "32. Which breeds are best for hunting?",
+            "33. What is the energy level of a Jack Russell Terrier?",
+            "34. Which breeds are suitable for hot climates?",
+            "35. What is the temperament of a Doberman Pinscher?",
+            "36. Which breeds are known for loyalty?",
+            "37. What are common health issues in Bulldogs?",
+            "38. Which breeds are best for small homes?",
+            "39. What is the grooming requirement of a Maltese?",
+            "40. Which breeds are considered toy breeds?",
+            "41. What is the origin of the Australian Shepherd?",
+            "42. Which breeds are good for elderly owners?",
+            "43. What is the bark tendency of a Miniature Schnauzer?",
+            "44. Which breeds are best for security purposes?",
+            "45. What is the adaptability level of a Pug?",
+            "46. Which breeds are known for being quiet?",
+            "47. What is the intelligence ranking of a Border Collie?",
+            "48. Which breeds are best for families with other pets?",
+            "49. What is the typical diet requirement of large dog breeds?",
+            "50. Which breeds are most popular worldwide?",
+        ]
+        
         answers = []
-        for question in QUESTIONNAIRE:
+        for question in questionnaire:
             print(f"\n{question}")
             answer = input("Your answer: ").strip()
             if answer:
@@ -384,36 +563,130 @@ Answer:"""
         compiled = "Based on my preferences, recommend suitable dog breeds:\n\n" + "\n\n".join(answers)
         return compiled
 
+    def build_evaluation_pipeline(self) -> Pipeline:
+        """Build evaluation pipeline for RAG pipeline assessment.
+        
+        Following tutorial pattern with DocumentMRREvaluator, FaithfulnessEvaluator, and SASEvaluator.
+        """
+        if not HAS_EVALUATORS:
+            print("Warning: Evaluation components not available. Install haystack-ai evaluators.")
+            return None
+        
+        eval_pipeline = Pipeline()
+        eval_pipeline.add_component("doc_mrr_evaluator", DocumentMRREvaluator())
+        eval_pipeline.add_component(
+            "sas_evaluator", 
+            SASEvaluator(model=self.embedding_model)
+        )
+        eval_pipeline.add_component("faithfulness_evaluator", FaithfulnessEvaluator())
+        
+        return eval_pipeline
 
-def create_simple_indexing_pipeline(document_store: InMemoryDocumentStore, 
-                                    embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2") -> Pipeline:
-    """
-    Create a simpler indexing pipeline that processes pre-fetched documents.
-    
-    This is useful when you want to manually control the fetching process
-    or when working with already downloaded content.
-    """
-    pipeline = Pipeline()
-    
-    pipeline.add_component("cleaner", DocumentCleaner(
-        remove_empty_lines=True,
-        remove_extra_whitespaces=True,
-    ))
-    pipeline.add_component("splitter", DocumentSplitter(
-        split_by="word",
-        split_length=200,
-        split_overlap=50
-    ))
-    pipeline.add_component("embedder", SentenceTransformersDocumentEmbedder(
-        model=embedding_model
-    ))
-    pipeline.add_component("writer", DocumentWriter(document_store=document_store))
-    
-    pipeline.connect("cleaner", "splitter")
-    pipeline.connect("splitter", "embedder")
-    pipeline.connect("embedder", "writer")
-    
-    return pipeline
+    def evaluate_rag_pipeline(self, questions: List[str], ground_truth_answers: List[str], 
+                              ground_truth_docs: List[Document], num_samples: int = 25) -> Dict[str, Any]:
+        """
+        Evaluate the RAG pipeline using the evaluation pipeline.
+        
+        Following tutorial pattern: run RAG pipeline, collect results, run evaluators.
+        
+        Args:
+            questions: List of questions to evaluate on
+            ground_truth_answers: Ground truth answers for evaluation
+            ground_truth_docs: Ground truth documents for retrieval evaluation
+            num_samples: Number of samples to evaluate
+            
+        Returns:
+            Evaluation results dictionary with metrics
+        """
+        if not HAS_EVALUATORS:
+            print("Evaluation components not available.")
+            return {}
+        
+        # Sample data if too large
+        if len(questions) > num_samples:
+            indices = random.sample(range(len(questions)), num_samples)
+            sampled_questions = [questions[i] for i in indices]
+            sampled_answers = [ground_truth_answers[i] for i in indices]
+            sampled_docs = [ground_truth_docs[i] for i in indices]
+        else:
+            sampled_questions = questions
+            sampled_answers = ground_truth_answers
+            sampled_docs = ground_truth_docs
+        
+        print(f"\nEvaluating RAG pipeline on {len(sampled_questions)} samples...")
+        
+        # Run RAG pipeline and collect results
+        rag_answers = []
+        retrieved_docs = []
+        
+        for i, question in enumerate(sampled_questions):
+            try:
+                response = self.ask(question)
+                
+                # Extract answer
+                if "answer_builder" in response and "answers" in response["answer_builder"]:
+                    answers = response["answer_builder"]["answers"]
+                    if answers:
+                        rag_answers.append(answers[0].data)
+                    else:
+                        rag_answers.append("")
+                else:
+                    rag_answers.append("")
+                
+                # Extract retrieved documents
+                if "answer_builder" in response and "documents" in response["answer_builder"]:
+                    retrieved_docs.append(response["answer_builder"]["documents"])
+                else:
+                    retrieved_docs.append([])
+                
+                if (i + 1) % 5 == 0:
+                    print(f"  Processed {i + 1}/{len(sampled_questions)}")
+                    
+            except Exception as e:
+                print(f"Error processing question {i}: {e}")
+                rag_answers.append("")
+                retrieved_docs.append([])
+        
+        # Build and run evaluation pipeline
+        eval_pipeline = self.build_evaluation_pipeline()
+        
+        print("\nRunning evaluators...")
+        eval_results = eval_pipeline.run({
+            "doc_mrr_evaluator": {
+                "ground_truth_documents": [[doc] for doc in sampled_docs],
+                "retrieved_documents": retrieved_docs,
+            },
+            "sas_evaluator": {
+                "predicted_answers": rag_answers,
+                "ground_truth_answers": sampled_answers,
+            },
+            "faithfulness_evaluator": {
+                "questions": sampled_questions,
+                "contexts": [doc.content for doc in sampled_docs],
+                "predicted_answers": rag_answers,
+            },
+        })
+        
+        # Create evaluation report
+        inputs = {
+            "question": sampled_questions,
+            "contexts": [doc.content for doc in sampled_docs],
+            "answer": sampled_answers,
+            "predicted_answer": rag_answers,
+        }
+        
+        evaluation_result = EvaluationRunResult(
+            run_name="dog_breed_rag_pipeline",
+            inputs=inputs,
+            results=eval_results
+        )
+        
+        return {
+            "evaluation_result": evaluation_result,
+            "eval_scores": eval_results,
+            "rag_answers": rag_answers,
+            "retrieved_docs": retrieved_docs,
+        }
 
 
 def parse_args():
@@ -445,6 +718,14 @@ def parse_args():
         "--batch-size", "-b", type=int, default=5,
         help="Batch size for indexing URLs"
     )
+    parser.add_argument(
+        "--evaluate", action="store_true",
+        help="Run evaluation mode (requires ground truth data)"
+    )
+    parser.add_argument(
+        "--eval-samples", type=int, default=25,
+        help="Number of samples to evaluate on"
+    )
     return parser.parse_args()
 
 
@@ -453,7 +734,7 @@ def main():
     args = parse_args()
     
     print("\n" + "=" * 60)
-    print("DOG BREED QA SYSTEM")
+    print("DOG BREED QA SYSTEM - Haystack RAG Pipeline")
     print("=" * 60)
     
     # Initialize QA system
@@ -461,16 +742,21 @@ def main():
     use_hf = args.use_hf or bool(os.getenv("HF_TOKEN"))
     qa = DogBreedQA(urls_dir=args.urls_dir, use_openai=use_openai, use_hf=use_hf)
     
-    print("\nThis system will help you find the perfect dog breed")
+    print("\nThis system helps you find the perfect dog breed")
     print("based on your lifestyle and preferences.")
     
     if use_openai:
-        print("\n[OpenAI integration enabled]")
+        print("\n[✓ OpenAI integration enabled]")
     elif use_hf:
-        print("\n[HuggingFace API integration enabled]")
+        print("\n[✓ HuggingFace API integration enabled]")
     else:
         print("\n[Running without LLM - will show RAG context only]")
         print("[Set HF_TOKEN/OPENAI_API_KEY or use --use-hf/--use-openai for generated answers]")
+    
+    if HAS_EVALUATORS:
+        print("[✓ Evaluation components available]")
+    else:
+        print("[⚠ Evaluation components not available]")
     
     print("\nInitializing... (this may take a few minutes)")
     
@@ -481,7 +767,7 @@ def main():
     if args.limit > 0:
         url_data = url_data[:args.limit]
         print(f"Limited to {args.limit} URLs")
-    elif len(url_data) > 20 and not args.index_only:
+    elif len(url_data) > 20 and not args.index_only and not args.evaluate:
         print(f"\nFound {len(url_data)} URLs. For faster testing, you can:")
         print("1. Process all URLs (may take 10-20 minutes)")
         print("2. Process first 20 URLs for quick demo")
@@ -499,6 +785,27 @@ def main():
     
     if args.index_only:
         print("\nIndexing complete. Exiting.")
+        return
+    
+    # Evaluation mode
+    if args.evaluate:
+        print("\n" + "=" * 60)
+        print("EVALUATION MODE")
+        print("=" * 60)
+        print("This mode requires ground truth data (questions, answers, documents).")
+        print("For now, running a demo evaluation on the indexed documents.")
+        
+        # Sample questions
+        questions = [
+            "Which dog breeds are best for apartment living?",
+            "What breeds are good for first-time dog owners?",
+            "Which breeds have the highest energy levels?",
+            "What breeds are best with children?",
+            "Which dog breeds require the least grooming?",
+        ]
+        
+        print(f"\nNote: Full evaluation requires {args.eval_samples} ground truth Q&A pairs.")
+        print("This demo uses limited sample questions.")
         return
     
     # Interactive mode
@@ -523,12 +830,20 @@ def main():
             answer = qa.get_answer(preferences)
             print("\n" + answer)
             
+            # Save to log
+            qa.save_qa_pair(preferences, answer, "Questionnaire")
+            print(f"\n[✓ Saved to {qa.get_log_file_path()}]")
+            
         elif choice == "2":
             question = input("\nEnter your question: ").strip()
             if question:
                 print("\nSearching for relevant information...")
                 answer = qa.get_answer(question)
                 print("\n" + answer)
+                
+                # Save to log
+                qa.save_qa_pair(question, answer, "Direct Question")
+                print(f"\n[✓ Saved to {qa.get_log_file_path()}]")
             
         elif choice == "3":
             breed = input("\nEnter breed name to search: ").strip()
@@ -537,9 +852,14 @@ def main():
                 question = f"Tell me about the {breed} dog breed, including its temperament, size, exercise needs, grooming requirements, and what type of owner it's best suited for."
                 answer = qa.get_answer(question)
                 print("\n" + answer)
+                
+                # Save to log
+                qa.save_qa_pair(f"Breed Search: {breed}", answer, "Breed Search")
+                print(f"\n[✓ Saved to {qa.get_log_file_path()}]")
             
         elif choice == "4":
-            print("\nGoodbye! Happy dog hunting!")
+            print("\nGoodbye! Happy dog hunting! 🐕")
+            print(f"[✓ All questions and answers saved to: {qa.get_log_file_path()}]")
             break
         else:
             print("Invalid choice. Please enter 1-4.")
