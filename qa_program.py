@@ -21,6 +21,7 @@ Usage:
 import os
 import sys
 import glob
+import json
 import argparse
 import requests
 import time
@@ -167,7 +168,7 @@ class DogBreedQA:
         # Create timestamped log file
         from datetime import datetime
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.qa_log_file = os.path.join(self.output_dir, f"qa_log_{timestamp}.txt")
+        self.qa_log_file = os.path.join(self.output_dir, f"qa_log_{timestamp}.json")
         
         # Initialize log file with header
         self._initialize_log_file()
@@ -178,24 +179,23 @@ class DogBreedQA:
             print("Warning: HuggingFace requested but not available. Set HF_TOKEN env var.")
 
     def _initialize_log_file(self):
-        """Initialize the Q&A log file with header information."""
+        """Initialize the Q&A log file with JSON structure."""
         from datetime import datetime
-        header = f"""================================================================================
-DOG BREED QA SYSTEM - Question & Answer Log
-================================================================================
-Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
-Embedding Model: {self.embedding_model}
-OpenAI Enabled: {self.use_openai}
-HuggingFace Enabled: {self.use_hf}
-================================================================================
-
-"""
+        log_data = {
+            "metadata": {
+                "generated": datetime.now().isoformat(),
+                "embedding_model": self.embedding_model,
+                "openai_enabled": self.use_openai,
+                "huggingface_enabled": self.use_hf
+            },
+            "qa_pairs": []
+        }
         with open(self.qa_log_file, 'w', encoding='utf-8') as f:
-            f.write(header)
+            json.dump(log_data, f, indent=2, ensure_ascii=False)
 
     def save_qa_pair(self, question: str, answer: str, session_type: str = "Interactive"):
         """
-        Save a question-answer pair to the log file.
+        Save a question-answer pair to the JSON log file.
         
         Args:
             question: The user's question
@@ -204,23 +204,25 @@ HuggingFace Enabled: {self.use_hf}
         """
         from datetime import datetime
         
-        # Format the Q&A entry
-        entry = f"""[{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}] {session_type}
-{'─' * 80}
-QUESTION:
-{question}
-
-ANSWER:
-{answer}
-
-{'=' * 80}
-
-"""
-        
-        # Append to log file
         try:
-            with open(self.qa_log_file, 'a', encoding='utf-8') as f:
-                f.write(entry)
+            # Read existing data
+            with open(self.qa_log_file, 'r', encoding='utf-8') as f:
+                log_data = json.load(f)
+            
+            # Create new QA entry
+            qa_entry = {
+                "timestamp": datetime.now().isoformat(),
+                "session_type": session_type,
+                "question": question,
+                "answer": answer
+            }
+            
+            # Add to the qa_pairs list
+            log_data["qa_pairs"].append(qa_entry)
+            
+            # Write updated data back
+            with open(self.qa_log_file, 'w', encoding='utf-8') as f:
+                json.dump(log_data, f, indent=2, ensure_ascii=False)
         except Exception as e:
             print(f"Warning: Could not save Q&A pair to log: {e}")
 
@@ -298,25 +300,41 @@ ANSWER:
         # Create chat prompt template following tutorial pattern
         template = [
             ChatMessage.from_user(
-                """You are an expert dog breed advisor helping users find the perfect dog breed.
+"""You are a dog-information assistant answering questions about dogs and dog breeds.
 
-Based on the following Wikipedia information about various dog breeds, answer the user's question.
+Use ONLY the retrieved Wikipedia context below to answer the user's question.
 
-Context:
+Retrieved Context:
 {% for document in documents %}
+[Document {{ loop.index }}]
 {{ document.content }}
 ---
 {% endfor %}
 
-Question: {{ question }}
+User Question:
+{{ question }}
 
-Instructions:
-- Provide specific breed recommendations when appropriate
-- Consider size, temperament, exercise needs, grooming, trainability, and living situation compatibility
-- Be honest if the provided context doesn't contain enough information
-- Format your response clearly with breed names highlighted
+Rules:
+1. Base your answer only on the retrieved context.
+2. Do not add facts that are not supported by the context. Do not guess or infer beyond what is explicitly stated in the context.
+3. Every key claim in the answer must be supported by at least one citation [Document X].
+4. If the context is insufficient, say clearly that the answer cannot be fully determined from the retrieved Wikipedia passages.
+5. If the question asks for recommendations, suggestions, or comparisons, base them strictly on the retrieved context.
+6. If the question is about choosing a breed, consider traits mentioned in the context such as size, temperament, activity level, grooming needs, trainability, and suitability for living situations.
+7. If multiple documents are relevant, combine them into a coherent answer.
+8. After the answer, provide a "References" section containing relevant excerpts from the retrieved context.
+9. Only include references that directly support the answer.
+10. Avoid repeating similar or redundant references.
 
-Answer:"""
+Required Output Format:
+
+Answer:
+<clear answer with citations>
+
+References:
+- [Document X]: <relevant excerpt from passage>
+- [Document Y]: <relevant excerpt from passage>
+"""
             )
         ]
         
@@ -373,9 +391,9 @@ Answer:"""
             rag_pipeline.connect("generator.replies", "answer_builder.replies")
             rag_pipeline.connect("retriever", "answer_builder.documents")
         else:
-            # No generator: just use retrieved documents as context
-            rag_pipeline.add_component("answer_builder", AnswerBuilder())
-            rag_pipeline.connect("retriever", "answer_builder.documents")
+            # No generator: don't use answer_builder, just return documents
+            # The ask() method will format documents as context
+            pass
         
         return rag_pipeline
 
@@ -450,11 +468,11 @@ Answer:"""
         run_inputs = {
             "query_embedder": {"text": question},
             "prompt_builder": {"question": question},
-            "answer_builder": {"query": question},
         }
         
-        # Only include generator input if generator is in use
+        # Only include answer_builder and generator if generator is in use
         if self.use_openai or self.use_hf:
+            run_inputs["answer_builder"] = {"query": question}
             run_inputs["generator"] = {}  # Uses piped-in messages from prompt_builder
         
         # Run the RAG pipeline with required inputs
@@ -474,18 +492,24 @@ Answer:"""
         """
         result = self.ask(question)
         
-        # Extract answer from answer_builder following tutorial pattern
-        if "answer_builder" in result and "answers" in result["answer_builder"]:
-            answers = result["answer_builder"]["answers"]
-            if answers:
-                return answers[0].data
+        # Extract answer from answer_builder if using generator
+        if self.use_openai or self.use_hf:
+            if "answer_builder" in result and "answers" in result["answer_builder"]:
+                answers = result["answer_builder"]["answers"]
+                if answers:
+                    return answers[0].data
         
-        # Fallback: return the prompt (context) for manual review
-        if "prompt_builder" in result:
-            prompt = result["prompt_builder"].get("prompt", "")
-            return f"[Retrieved Context - No LLM configured]\n\n{prompt}"
+        # Context-only mode: format retrieved documents
+        if "retriever" in result and "documents" in result["retriever"]:
+            documents = result["retriever"]["documents"]
+            if documents:
+                formatted_answer = "Based on Wikipedia articles about dog breeds:\n\n"
+                for i, doc in enumerate(documents[:5], 1):
+                    content = doc.content[:400] if len(doc.content) > 400 else doc.content
+                    formatted_answer += f"[Document {i}]\n{content}\n\n"
+                return formatted_answer
         
-        return "No answer could be generated."
+        return "No answer could be generated. Please ensure documents are indexed."
 
     def interactive_questionnaire(self) -> str:
         """Run the interactive questionnaire and return compiled preferences."""
@@ -623,7 +647,7 @@ Answer:"""
             try:
                 response = self.ask(question)
                 
-                # Extract answer
+                # Extract answer from answer_builder (if using generator)
                 if "answer_builder" in response and "answers" in response["answer_builder"]:
                     answers = response["answer_builder"]["answers"]
                     if answers:
@@ -633,9 +657,9 @@ Answer:"""
                 else:
                     rag_answers.append("")
                 
-                # Extract retrieved documents
-                if "answer_builder" in response and "documents" in response["answer_builder"]:
-                    retrieved_docs.append(response["answer_builder"]["documents"])
+                # Extract retrieved documents (from retriever component)
+                if "retriever" in response and "documents" in response["retriever"]:
+                    retrieved_docs.append(response["retriever"]["documents"])
                 else:
                     retrieved_docs.append([])
                 

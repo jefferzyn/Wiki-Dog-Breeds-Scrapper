@@ -154,7 +154,7 @@ Questions should be in `data/dog_breed_questions.txt`:
 ```
 
 **Output:**
-Results are saved to `data/qa_outputs/qa_log_[timestamp].txt` with:
+Results are saved to `data/qa_outputs/qa_log_[timestamp].json` with:
 - Timestamp
 - Question asked
 - Text answer
@@ -363,7 +363,7 @@ pip install --upgrade requests urllib3
 ## Output Files
 
 - `data/dog_breeds.json` - Cached breed list
-- `data/qa_outputs/qa_log_*.txt` - Q&A session logs with timestamps
+- `data/qa_outputs/qa_log_*.json` - Q&A session logs with timestamps
 - `data/urls/*.txt` - Individual breed URL files
 
 ## Examples
@@ -385,7 +385,7 @@ python qa_program.py
 ```bash
 # Create data/dog_breed_questions.txt with your questions
 python batch_qa_processor.py --limit 50
-# Check data/qa_outputs/qa_log_*.txt for results
+# Check data/qa_outputs/qa_log_*.json for results
 ```
 
 ## Performance Notes
