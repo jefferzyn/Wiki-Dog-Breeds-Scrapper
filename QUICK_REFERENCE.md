@@ -96,10 +96,10 @@ log_file = qa.get_log_file_path()
 ## 📊 What Your Batch Will Generate
 
 Running the full batch will create a file like:
-**`data/qa_outputs/qa_log_20260406_153042.txt`**
+**`data/qa_outputs/qa_log_20260406_153042.json`**
 
 This file contains:
-- **50 complete Q&A pairs**
+- **50 complete Q&A pairs** (structured in JSON format)
 - **Timestamps** for each interaction
 - **Session metadata** (model, config used)
 - **Formatted answers** with context
@@ -212,21 +212,23 @@ cat data/dog_breed_questions.txt
 
 ### View Generated Logs
 ```bash
-# Windows
-type data/qa_outputs/qa_log_*.txt
+# Windows - view JSON file
+type data/qa_outputs/qa_log_*.json
 
-# Linux/Mac
-cat data/qa_outputs/qa_log_*.txt
+# Linux/Mac - view JSON file
+cat data/qa_outputs/qa_log_*.json
 ```
 
 ### Count Log Entries
 ```bash
-grep -c "Batch Processing" data/qa_outputs/qa_log_*.txt
+# Count Q&A pairs in JSON file
+jq '.qa_pairs | length' data/qa_outputs/qa_log_*.json
 ```
 
 ### Search Specific Topic
 ```bash
-grep -i "apartment" data/qa_outputs/qa_log_*.txt
+# Find questions containing "apartment" in JSON
+jq '.qa_pairs[] | select(.question | test("apartment"; "i"))' data/qa_outputs/qa_log_*.json
 ```
 
 ---

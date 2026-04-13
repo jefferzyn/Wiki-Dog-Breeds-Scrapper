@@ -35,7 +35,7 @@ This will:
 1. Load all 50 questions from `data/dog_breed_questions.txt`
 2. Index your dog breed documents (may take 10-20 minutes)
 3. Process each question through the RAG pipeline
-4. Save all Q&A pairs to `data/qa_outputs/qa_log_YYYYMMDD_HHMMSS.txt`
+4. Save all Q&A pairs to `data/qa_outputs/qa_log_YYYYMMDD_HHMMSS.json`
 
 ### Process First N Questions
 ```bash
@@ -155,7 +155,7 @@ Failed: 0
 
 Average time per question: 12.3 seconds
 
-All results saved to: data/qa_outputs/qa_log_20260406_153042.txt
+All results saved to: data/qa_outputs/qa_log_20260406_153042.json
 ================================================================================
 ```
 
@@ -163,41 +163,53 @@ All results saved to: data/qa_outputs/qa_log_20260406_153042.txt
 
 ### 1. Review Answers
 ```bash
-# Open and read the log file
-type data/qa_outputs/qa_log_20260406_153042.txt
+# Open and read the JSON log file
+type data/qa_outputs/qa_log_20260406_153042.json
 
 # Or view in your editor
-code data/qa_outputs/qa_log_20260406_153042.txt
+code data/qa_outputs/qa_log_20260406_153042.json
+
+# Pretty print the JSON
+powershell -Command "Get-Content data/qa_outputs/qa_log_*.json | ConvertFrom-Json | ConvertTo-Json -Depth 10"
 ```
 
 ### 2. Extract Questions Only
 ```bash
-# Find all questions in the log
-grep "^QUESTION:" data/qa_outputs/qa_log_*.txt
+# Find all questions in the JSON log using jq (if installed)
+jq '.qa_pairs[] | .question' data/qa_outputs/qa_log_*.json
+
+# Or using Python
+python -c "import json; data = json.load(open('data/qa_outputs/qa_log_20260406_153042.json')); [print(pair['question']) for pair in data['qa_pairs']]"
 ```
 
 ### 3. Extract Answers Only
 ```bash
-# Find all answers in the log
-grep -A 20 "^ANSWER:" data/qa_outputs/qa_log_*.txt
+# Find all answers in the JSON log
+jq '.qa_pairs[] | .answer' data/qa_outputs/qa_log_*.json
+
+# Or using Python
+python -c "import json; data = json.load(open('data/qa_outputs/qa_log_20260406_153042.json')); [print(pair['answer']) for pair in data['qa_pairs']]"
 ```
 
 ### 4. Count Interactions
 ```bash
 # See how many Q&A pairs in a file
-grep "Batch Processing" data/qa_outputs/qa_log_*.txt | wc -l
+jq '.qa_pairs | length' data/qa_outputs/qa_log_*.json
+
+# Or using Python
+python -c "import json; data = json.load(open('data/qa_outputs/qa_log_20260406_153042.json')); print(len(data['qa_pairs']))"
 ```
 
 ### 5. Search for Specific Topics
 ```bash
-# Find all breed-related questions
-grep -i "breed" data/qa_outputs/qa_log_*.txt
+# Find all questions containing "breed"
+jq '.qa_pairs[] | select(.question | contains("breed"))' data/qa_outputs/qa_log_*.json
 
 # Find all questions about health
-grep -i "health\|disease\|issue" data/qa_outputs/qa_log_*.txt
+jq '.qa_pairs[] | select(.question | test("health|disease|issue"; "i"))' data/qa_outputs/qa_log_*.json
 
 # Find all grooming-related Q&A
-grep -i "groom" data/qa_outputs/qa_log_*.txt
+jq '.qa_pairs[] | select(.question | test("groom"; "i"))' data/qa_outputs/qa_log_*.json
 ```
 
 ## Use Cases
